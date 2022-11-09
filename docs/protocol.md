@@ -49,6 +49,21 @@ Note that each Action will being with the word Action, following by the name of 
 
 In between begin and end, there is a list of commands and definitions. Each command is on a new line. These commands are executed in order, and are written in the format of `<time>=>command.` The time is the time at which the command is executed. The command is the action to be executed. Many of the normal commands are just calls to mfmsub, which is a macro meaning "measure, flash, measure, then substract".
 
+## Time Syntax
+
+There are two main types of time syntax. The first is a simple time, given in seconds or milliseconds. It executes the given Action at a time in reference to either the beginning of the Action in which it is written, or in reference to the beginning of protocol execution by the program.
+
+The second time syntax is<800ms/2,800ms/2 + mfmsub_length .. 800ms>=>mfmsub<800ms/2,800ms/2 + mfmsub_length .. 800ms>=>mfmsub
+The time portion of these Actions does not follow the normal format. It is not a single timepoint. Instead, it defines a sequence of timepoints. The sequence definitions is written as `<start, step .. end>`. This defines a sequence of timepoints from start to end, with a step size of step. All time information is in reference to the moment the Action is called, not the outside time. For example, if the Action is called at 10s, and the sequence is `<0s, 1s .. 10s>`, then the sequence will be 10s, 11s, 12s, 13s, 14s, 15s, 16s, 17s, 18s, 19s, 20s.
+
+The following is an example of a sequence definition:
+
+```{protocol}
+    <800ms/2,800ms/2 + mfmsub_length .. 800ms>=>mfmsub
+```
+
+In this example, the sequence starts at 800ms/2, and ends at 800ms. The step size is 800ms/2 + mfmsub_length. This means that the mfmsub Action will be executed at the following timepoints: 800ms/2, 800ms/2 + 800ms/2 + mfmsub_length, 800ms/2 + 2 \* (800ms/2 + mfmsub_length), and so on until the end of the sequence is reached.
+
 ## Action calls
 
 Calling an Action is done by providing the Action name, with optional parentheses and arguments to provide to the action. If the Action name was defined with arguments, it must be called with arugments provided. `SATPULSE` is acceptable usage, but `SATPULSE(100ms)` is not, as it was not defined with arguments.
@@ -66,3 +81,16 @@ A few of the common pre-defined Actions are listed below. You will see these in 
 <time>=>act1(PulseDuration) ## a call to turn on the actinic light 1 for <PulseDuration> at <time>
 <time>=>checkPoint,"<label>" ## a call to label the data at <time> with <label>, ex "startFm_D3".
 ```
+
+## Tokens:
+
+### Definitions
+letters = [A-Za-z]
+time_s = "[0-9]+s"
+time_ms = "[0-9]+ms"
+
+
+
+### commands
+<time>=>text
+<time>=>text(time)
