@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import datetime
 import os
-from script_parser import ScriptParser
+from protoparser import ProtocolParser
 
 # load a text file from the local directory
 # get the current working directory

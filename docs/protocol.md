@@ -78,19 +78,75 @@ A few of the common pre-defined Actions are listed below. You will see these in 
 
 ```{protocol}
 <time>=>mfmsub  ## a call to perform a measurement at the <time> specified
-<time>=>act1(PulseDuration) ## a call to turn on the actinic light 1 for <PulseDuration> at <time>
+<time>=>act1(PulseDuration) ## a call to turn on the actinic light 1 (red) for <PulseDuration> at <time>
+<time>=>act2(PulseDuration) ## a call to turn on the actinic light 2 (blue) for <PulseDuration> at <time>
 <time>=>checkPoint,"<label>" ## a call to label the data at <time> with <label>, ex "startFm_D3".
 ```
 
-## Tokens:
+## Special Characters:
+
+When parsing the protocol, each line should be split into tokens. The tokens are not seperated by spaces, and are divided by certain characters depending on the type of command or action they belong to. The following is a partial list of the token dividers that are used in the protocol file.
+
+- `;` - comment character. Everything after this character is ignored.
+- `<` - begin time definition
+- `>` - end time definition. If the `>` id preceded by an equal sign, then it is not a time definition, but a command definition.
+- `,` - seperates begin and step arguments in a time sequence definition.
+- `..` - seperates step and end arguments in a time sequence definition.
+- `=>` - command definition. The token to the left of the `=>` is the time, and the token to the right is the command.
+- `+` - addition operator. Used in time definitions.
+- `*` - multiplication operator. Used in variables and time definitions.
+- `s` - seconds unit. Used in time definitions. Always the rightmost character of a time unit.
+- `ms` - milliseconds unit. Used in time definitions. Always the rightmost character of a time unit.
+- `##` - comment character. Strip all lines of this character and everything after it.
+- `mfmsublength` - a variable that is defined elsewhere in the fluorcam code. We do not know exactly what it is, but it is used in the time definitions of the protocol files.
+- `( )` - parentheses. Used to define arguments to an action. -`checkPoint,"x"` - checkPoint label declaration. Used to define a string argument to the checkPoint action. Checkpoint is a special case of action. It is not called with parentheis, but instead with a comma followed by quotation marks. The string inside the quotation marks is the label that is assigned to the data at that timepoint.
+
+````{protocol}
+discard lines starting with ;
+< denotes a line that has a command pair
+Action denotes the beginning of a new action
+end denotes the end of an action
+=> denotes the separation between time and command
+, denotes the separation between elements of a squence
 
 ### Definitions
-letters = [A-Za-z]
-time_s = "[0-9]+s"
-time_ms = "[0-9]+ms"
 
+### Time Definition Syntax
 
+- `var=100.0`
+- `var=100`
+- `var=100ms`
+- `var=100s`
+- `var=100.2s`
+- `var=var2 + 11s`
+- `var=var2 + var3`
+- `<...>` encapsulates a time point. It can be a single time point, or an arithmetic expression including variables and numbers
+- `<-x>` is a time point relative to the beginning of the action, can be negative (x time before current action would be called)
 
 ### commands
-<time>=>text
-<time>=>text(time)
+
+- `<time>=>text`
+- `<time>=>text(time)`
+
+### section labels for readability
+
+There are section labels for dividing the protocol into broad categories, and for readability. These are not required, but are useful for organizing the protocol. The section labels are:
+
+```{protocol}
+;--------------------------------------------------------------------------------------
+;******* Dark Relaxation Measurement **************************************************
+;--------------------------------------------------------------------------------------
+````
+
+Three lines, first line is a semicolor followed by x dashes, second line is the section label placed inside of a left and right buffer of asterisks, with one space on either side of the label. The third line is the same as the first line.
+
+Common section labels are:
+
+- Fo Measurement
+- Fm Measurement
+- Dark Relaxation Measurement
+- Light Adaptation Measurement
+
+### label of time points or pulses
+
+Within a section, individual pulses can be labels with a time point label just before the actions. This is usually just a line with a semicolon and the label. For example `;dark pulse D3`.
