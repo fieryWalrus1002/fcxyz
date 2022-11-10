@@ -1,5 +1,9 @@
-FROM python:3.10-alpine
+FROM ubuntu:latest AS py3dox-dev
 
-WORKDIR /usr/src/app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt update \
+    && apt install -y \
+       git \
+       python3-dev \
+       python3-pip \
+       doxygen \
+       graphviz
