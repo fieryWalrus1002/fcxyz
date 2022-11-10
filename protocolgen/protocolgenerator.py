@@ -1,15 +1,10 @@
-import json
-import requests
-import pandas as pd
-import numpy as np
-import datetime
+from protocolgen.protocolparser import ProtocolParser
 import os
-from protoparser import ProtocolParser
 
 # load a text file from the local directory
 # get the current working directory
 protocol_path = f"{os.getcwd()}/light-protocol.p"
 
-sp = ScriptParser(protocol_path)
+pp = ProtocolParser(protocol_path)
 
-sp.parse_script()
+
