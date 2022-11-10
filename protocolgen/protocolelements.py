@@ -1,5 +1,5 @@
-"""@ protocol elements
-This module contains the elements of a Fluorcam7 *.p protocol file, which details the how and when of device actions. These actions can be flashing the saturation pulse, capturing data at a particular time, and labeling the data with text markers for later use during analysis.
+"""This module contains the elements of a Fluorcam7 *.p protocol file, which details the how and when of device actions. These actions can be flashing the saturation pulse, capturing data at a particular time, and labeling the data with text markers for later use during analysis.
+
 """
 from dataclasses import dataclass
 
