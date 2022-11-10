@@ -1,4 +1,8 @@
-
+"""@package docstring
+Documentation for the procotolelements module.
+ 
+ This module contains the elements of a Fluorcam7 *.p protocol file, which details the how and when of device actions. These actions can be flashing the saturation pulse, capturing data at a particular time, and labeling the data with text markers for later use during analysis.
+"""
 from dataclasses import dataclass
 
 @dataclass
@@ -9,7 +13,6 @@ class Variable:
     """
     name: str
     variables: list
-
 
 @dataclass
 class Action:
@@ -31,16 +34,6 @@ class CommandPair:
     time: float
     command: str
     variables: list
-
-
-### section labels for readability
-# There are section labels for dividing the protocol into broad categories, and for readability. These are not required, but are useful for organizing the protocol. The section labels are:
-# ```{protocol}
-# ;--------------------------------------------------------------------------------------
-# ;******* Dark Relaxation Measurement **************************************************
-# ;--------------------------------------------------------------------------------------
-# ````
-# Three lines, first line is a semicolor followed by x dashes, second line is the section label placed inside of a left and right buffer of asterisks, with one space on either side of the label. The third line is the same as the first line.
 
 @dataclass
 class SectionLabel:
