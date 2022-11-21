@@ -1,9 +1,19 @@
+"""@ protocolparser
+    This module hold the ProtocolParser class, which takes in a protocol and parses it into its components. """
 from dataclasses import dataclass
 import re
 
 
 class ProtocolParser:
-    def __init__(self, protocol_path:str):
+    """ The ProtocolParser class does the work of chopping a text protocol *.p file into a list of individual elements.
+
+    Parameters
+    ----------
+    protocol_path : str
+        A path to a *.p file that will be parsed.
+
+    """ 
+    def __init__(self, protocol_path:str) -> None:
         self.protocol = self.load_protocol(protocol_path)
 
     def load_protocol(self, protocol_path: str):
@@ -13,8 +23,9 @@ class ProtocolParser:
 
     def get_parsed_protocol(self) -> dict:
         # remove all white space and comments
-        clean_protocol = [line for line in self.protocol if self.check_valid(line)]
+        return [line for line in self.protocol if self.check_valid(line)]
         
+
         ###### find Variables, Actions, Commands Pairs
         
         ########### VARIABLES #############
@@ -59,13 +70,20 @@ class ProtocolParser:
         return re.findall(command_pattern, protocol, flags=re.MULTILINE|re.DOTALL|re.X)
 
 
-    def check_valid(self, line:str):
+        """
         if line.strip(" ").startswith(";") or line.strip(" ") == "":
             return False
         else:
             return True
  
-    def parse_line(self, line:str):
+    def parse_line(self, line:str) -> str or None:
+        """ parses a line, returning it if it is valid or none if not
+
+        returns
+        -------
+        str or None
+        """ 
+
         if self.check_valid(line) == False:
             return None
         else:

@@ -1,5 +1,6 @@
 import unittest
-from protocolgen.generator import ProtocolGenerator
+from protocolgen.protocolgenerator import ProtocolGenerator
+
 
 class TestProtoGenerator(unittest.TestCase):
     def test_init(self):
