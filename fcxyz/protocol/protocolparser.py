@@ -68,24 +68,3 @@ class ProtocolParser:
         # end
         command_pattern = r".+"
         return re.findall(command_pattern, protocol, flags=re.MULTILINE|re.DOTALL|re.X)
-
-
-        """
-        if line.strip(" ").startswith(";") or line.strip(" ") == "":
-            return False
-        else:
-            return True
- 
-    def parse_line(self, line:str) -> str or None:
-        """ parses a line, returning it if it is valid or none if not
-
-        returns
-        -------
-        str or None
-        """ 
-
-        if self.check_valid(line) == False:
-            return None
-        else:
-            return line
-
