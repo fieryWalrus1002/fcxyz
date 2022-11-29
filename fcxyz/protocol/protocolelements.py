@@ -6,40 +6,62 @@ from dataclasses import dataclass
 
 @dataclass
 class Variable:
-    """ A dataclass that contains a paired variable name and a list of its assigned values.
+    """A dataclass that contains a paired variable name and a list of its assigned values.
 
-    """
+    Parameters:
+    -----------
+    name : str
+        The name of the variable.
+    values : list
+        A list of values that are assigned to the variable. Joined by arithmetic operators."""
 
     name: str
     values: list
 
+    def stringify(self):
+        return f"{self.name} = {''.join(self.values)}\n"
+
 
 @dataclass
 class Action:
-    """ Actions are a dataclass that contains the name of the action, and a list of definitions and command pairs, ordered.
-    """
+    """Actions are a dataclass that contains the name of the action, and a list of variables and command pairs, ordered."""
 
     name: str
-    definitions: list
+    variables: list
     commands: list
+
+    def stringify(self):
+        action_str = f"Action {self.name} begin\n"
+
+        for variable in self.variables:
+            action_str += variable.stringify()
+
+        for command in self.commands:
+            action_str += command.stringify()
+
+        action_str += "end\n\n"
 
 
 @dataclass
 class CommandPair:
-    """ CommandPairs are a dataclass that contains the time of the command call, in milliseconds from protocol start (float), the command to be executed (string), and a list of variables that are being set by this command, if present. (list of strings)
-    
-    """
+    """CommandPairs are a dataclass that contains the time of the command call, in milliseconds from protocol start (float), the command to be executed (string), and a list of variables that are being set by this command, if present. (list of strings)"""
 
     time: float
     command: str
-    variables: list
+    variables: list = None
+
+    def stringify(self):
+        if self.variables is not None:
+            return f"<{self.time}>=>{self.command}({''.join(self.variables)})\n"
+        else:
+            return f"<{self.time}>=>{self.command}\n"
 
 
 @dataclass
 class SectionLabel:
-    """  Section labels are a dataclass that contains the name of the section, and when the section is printed, it will produce a string with multiple lines, first line is a semicolor followed by x dashes,
+    """Section labels are a dataclass that contains the name of the section, and when the section is printed, it will produce a string with multiple lines, first line is a semicolor followed by x dashes,
     second line is the section label placed inside of a left and right buffer of asterisks, with one space on either side of the label. The third line is the same as the first line.
-    
+
     """
 
     name: str

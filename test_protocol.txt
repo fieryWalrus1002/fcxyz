@@ -1,0 +1,68 @@
+;------------------------------------------------
+;protocol: test_protocol
+;notes: test protocol;created: 2022-11-28 17:39:38.444971
+;------------------------------------------------
+TS=20ms
+Shutter=3
+Sensitivity=52
+Act1={}
+Super=100
+include default.inc;
+include light.inc;;------------------------------------------------
+;-----------------  Actions --------------------
+;------------------------------------------------
+Action SATPULSE(end_time) begin
+<-mfmsub_length>=>mfmsub
+<0s>=>act1(800ms)
+<0s>=>act2(800ms)
+<0s,TS + 2 * mfmsub_length .. end_time>=>mfmsub
+<end_time + mfmsub_length>=>mfmsub
+end
+Action FARRED_MEASURE(end_time) begin
+<0s, 20ms, .. end_time - mfmsub_length>=>FAR(20ms - 2*mfmsub_length)
+<20ms - 2*mfmsub_length, 20ms, .. end_time - mfmsub_length>=>mfmsub
+end
+Action MEASURE(end_time) begin
+<20ms - 2*mfmsub_length, 20ms, .. end_time - mfmsub_length>=>mfmsub
+end
+
+
+;------------------------------------------------
+;--------------  Start Protocol -----------------
+;------------------------------------------------
+
+
+<10.0s>=>act1(10.0s);
+<10.0s>=>act2(10.0s);
+<10.0s>=>MEASURE(10.0s);
+<10.8s>=>SATPULSE(0.8s);
+<10.4s - 2*TS>=>check_point,"startFo_Lssss";
+<10.8s>=>check_point,"endFo_Lssss";
+<10.0s - 2*TS>=>check_point,"startFm_Lssss";
+<10.8s>=>check_point,"endFm_Lssss";
+
+
+<25.8s>=>MEASURE(75.0s);
+<26.6s>=>SATPULSE(0.8s);
+<26.200000000000003s - 2*TS>=>check_point,"startFt_D1";
+<26.6s>=>check_point,"endFt_D1";
+<25.8s - 2*TS>=>check_point,"startFm_D1";
+<26.6s>=>check_point,"endFm_D1";
+<101.6s>=>MEASURE(75.0s);
+<102.39999999999999s>=>SATPULSE(0.8s);
+<102.0s - 2*TS>=>check_point,"startFt_D2";
+<102.4s>=>check_point,"endFt_D2";
+<101.60000000000001s - 2*TS>=>check_point,"startFm_D2";
+<102.4s>=>check_point,"endFm_D2";
+<177.4s>=>MEASURE(75.0s);
+<178.20000000000002s>=>SATPULSE(0.8s);
+<177.79999999999998s - 2*TS>=>check_point,"startFt_D3";
+<178.2s>=>check_point,"endFt_D3";
+<177.39999999999998s - 2*TS>=>check_point,"startFm_D3";
+<178.2s>=>check_point,"endFm_D3";
+<253.2s>=>MEASURE(75.0s);
+<254.0s>=>SATPULSE(0.8s);
+<253.6s - 2*TS>=>check_point,"startFt_D4";
+<254.0s>=>check_point,"endFt_D4";
+<253.2s - 2*TS>=>check_point,"startFm_D4";
+<254.0s>=>check_point,"endFm_D4";
