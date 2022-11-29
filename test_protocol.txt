@@ -1,14 +1,18 @@
+include default.inc;
+include light.inc;
 ;------------------------------------------------
 ;protocol: test_protocol
-;notes: test protocol;created: 2022-11-28 17:39:38.444971
+;notes: test protocol
+;created: 2022-11-29 08:10:34.807797
 ;------------------------------------------------
 TS=20ms
 Shutter=3
 Sensitivity=52
-Act1={}
+Act1=60
+Act2=70
 Super=100
-include default.inc;
-include light.inc;;------------------------------------------------
+
+;------------------------------------------------
 ;-----------------  Actions --------------------
 ;------------------------------------------------
 Action SATPULSE(end_time) begin

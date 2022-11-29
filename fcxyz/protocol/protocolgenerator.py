@@ -141,17 +141,20 @@ class LightProtocol:
     def include_header(self):
         return "\n".join(
             [
+                "include default.inc;",
+                "include light.inc;",
                 f";------------------------------------------------",
                 f";protocol: {self.name}",
-                f";notes: {self.description}" f";created: {datetime.datetime.now()}",
+                f";notes: {self.description}",
+                f";created: {datetime.datetime.now()}",
                 f";------------------------------------------------",
                 "TS=20ms",
                 "Shutter=3",
                 "Sensitivity=52",
-                "Act1={}",
+                f"Act1={self.light_value.red}",
+                f"Act2={self.light_value.blue}",
                 "Super=100",
-                "include default.inc;",
-                "include light.inc;",
+                "\n",
             ]
         )
 
