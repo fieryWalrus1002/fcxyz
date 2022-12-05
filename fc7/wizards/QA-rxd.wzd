@@ -1,0 +1,524 @@
+%define_title('QA-Reoxidation')
+
+%define_group('Parameters')
+
+	
+  %define_var('actinic_flash')
+    type(int)
+    caption('A. Flash Duration (us)')
+    init_value(50)
+    minimum(10)
+	maximum(120)
+  %end_var
+  
+  %define_var('log_pulse_first')
+     type(real)
+     no_display
+	%end_var
+  
+  %define_var('log_pulse_last')
+     type(real)
+     no_display
+	%end_var  
+  
+	%define_var('pulse_first_time')
+    type(int)
+    caption('First DataPoint After A. Flash (us)')
+    init_value(30)
+    minimum(10)
+ 		%define_trigger
+      set('log_pulse_first := log(pulse_first_time)');
+    %end_trigger
+ 		%define_trigger
+      set('log_pulse_last := log(1000*pulse_last_time)');
+    %end_trigger    
+		%define_trigger
+		  set('pulse1_time := 10^((log_pulse_last-log_pulse_first)/40 * 1 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse2_time := 10^((log_pulse_last-log_pulse_first)/40 * 2 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse3_time := 10^((log_pulse_last-log_pulse_first)/40 * 3 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse4_time := 10^((log_pulse_last-log_pulse_first)/40 * 4 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse5_time := 10^((log_pulse_last-log_pulse_first)/40 * 5 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse6_time := 10^((log_pulse_last-log_pulse_first)/40 * 6 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse7_time := 10^((log_pulse_last-log_pulse_first)/40 * 7 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+	    set('pulse8_time := 10^((log_pulse_last-log_pulse_first)/40 * 8 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse9_time := 10^((log_pulse_last-log_pulse_first)/40 * 9 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse10_time := 10^((log_pulse_last-log_pulse_first)/40 * 10 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse11_time := 10^((log_pulse_last-log_pulse_first)/40 * 11 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse12_time := 10^((log_pulse_last-log_pulse_first)/40 * 12 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse13_time := 10^((log_pulse_last-log_pulse_first)/40 * 13 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse14_time := 10^((log_pulse_last-log_pulse_first)/40 * 14 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse15_time := 10^((log_pulse_last-log_pulse_first)/40 * 15 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse16_time := 10^((log_pulse_last-log_pulse_first)/40 * 16 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+	    set('pulse17_time := 10^((log_pulse_last-log_pulse_first)/40 * 17 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse18_time := 10^((log_pulse_last-log_pulse_first)/40 * 18 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse19_time := 10^((log_pulse_last-log_pulse_first)/40 * 19 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse20_time := 10^((log_pulse_last-log_pulse_first)/40 * 20 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse21_time := 10^((log_pulse_last-log_pulse_first)/40 * 21 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse22_time := 10^((log_pulse_last-log_pulse_first)/40 * 22 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse23_time := 10^((log_pulse_last-log_pulse_first)/40 * 23 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse24_time := 10^((log_pulse_last-log_pulse_first)/40 * 24 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse25_time := 10^((log_pulse_last-log_pulse_first)/40 * 25 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse26_time := 10^((log_pulse_last-log_pulse_first)/40 * 26 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+	    set('pulse27_time := 10^((log_pulse_last-log_pulse_first)/40 * 27 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse28_time := 10^((log_pulse_last-log_pulse_first)/40 * 28 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse29_time := 10^((log_pulse_last-log_pulse_first)/40 * 29 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse30_time := 10^((log_pulse_last-log_pulse_first)/40 * 30 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse31_time := 10^((log_pulse_last-log_pulse_first)/40 * 31 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse32_time := 10^((log_pulse_last-log_pulse_first)/40 * 32 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse33_time := 10^((log_pulse_last-log_pulse_first)/40 * 33 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse34_time := 10^((log_pulse_last-log_pulse_first)/40 * 34 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse35_time := 10^((log_pulse_last-log_pulse_first)/40 * 35 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+	    set('pulse36_time := 10^((log_pulse_last-log_pulse_first)/40 * 36+ log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse37_time := 10^((log_pulse_last-log_pulse_first)/40 * 37 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse38_time := 10^((log_pulse_last-log_pulse_first)/40 * 38 + log_pulse_first)')
+		%end_trigger			
+		%define_trigger
+		  set('pulse39_time := 10^((log_pulse_last-log_pulse_first)/40 * 39 + log_pulse_first)')
+		%end_trigger		
+					
+	%end_var
+	
+	%define_var('pulse_last_time')
+    type(int)
+    caption('Last DataPoint After A. Flash (ms)')
+    init_value(1000)
+    minimum(20)
+		maximum(100000)
+ 		%define_trigger
+      set('log_pulse_first := log(pulse_first_time)');
+    %end_trigger
+ 		%define_trigger
+      set('log_pulse_last := log(1000*pulse_last_time)');
+    %end_trigger      
+		%define_trigger
+		  set('pulse1_time := 10^((log_pulse_last-log_pulse_first)/40 * 1 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse2_time := 10^((log_pulse_last-log_pulse_first)/40 * 2 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse3_time := 10^((log_pulse_last-log_pulse_first)/40 * 3 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse4_time := 10^((log_pulse_last-log_pulse_first)/40 * 4 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse5_time := 10^((log_pulse_last-log_pulse_first)/40 * 5 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse6_time := 10^((log_pulse_last-log_pulse_first)/40 * 6 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse7_time := 10^((log_pulse_last-log_pulse_first)/40 * 7 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+	    set('pulse8_time := 10^((log_pulse_last-log_pulse_first)/40 * 8 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse9_time := 10^((log_pulse_last-log_pulse_first)/40 * 9 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse10_time := 10^((log_pulse_last-log_pulse_first)/40 * 10 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse11_time := 10^((log_pulse_last-log_pulse_first)/40 * 11 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse12_time := 10^((log_pulse_last-log_pulse_first)/40 * 12 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse13_time := 10^((log_pulse_last-log_pulse_first)/40 * 13 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse14_time := 10^((log_pulse_last-log_pulse_first)/40 * 14 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse15_time := 10^((log_pulse_last-log_pulse_first)/40 * 15 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse16_time := 10^((log_pulse_last-log_pulse_first)/40 * 16 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+	    set('pulse17_time := 10^((log_pulse_last-log_pulse_first)/40 * 17 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse18_time := 10^((log_pulse_last-log_pulse_first)/40 * 18 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse19_time := 10^((log_pulse_last-log_pulse_first)/40 * 19 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse20_time := 10^((log_pulse_last-log_pulse_first)/40 * 20 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse21_time := 10^((log_pulse_last-log_pulse_first)/40 * 21 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse22_time := 10^((log_pulse_last-log_pulse_first)/40 * 22 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse23_time := 10^((log_pulse_last-log_pulse_first)/40 * 23 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse24_time := 10^((log_pulse_last-log_pulse_first)/40 * 24 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse25_time := 10^((log_pulse_last-log_pulse_first)/40 * 25 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse26_time := 10^((log_pulse_last-log_pulse_first)/40 * 26 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+	    set('pulse27_time := 10^((log_pulse_last-log_pulse_first)/40 * 27 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse28_time := 10^((log_pulse_last-log_pulse_first)/40 * 28 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse29_time := 10^((log_pulse_last-log_pulse_first)/40 * 29 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse30_time := 10^((log_pulse_last-log_pulse_first)/40 * 30 + log_pulse_first)')
+		%end_trigger		
+		%define_trigger
+		  set('pulse31_time := 10^((log_pulse_last-log_pulse_first)/40 * 31 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse32_time := 10^((log_pulse_last-log_pulse_first)/40 * 32 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse33_time := 10^((log_pulse_last-log_pulse_first)/40 * 33 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse34_time := 10^((log_pulse_last-log_pulse_first)/40 * 34 + log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse35_time := 10^((log_pulse_last-log_pulse_first)/40 * 35 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+	    set('pulse36_time := 10^((log_pulse_last-log_pulse_first)/40 * 36+ log_pulse_first)')
+		%end_trigger
+		%define_trigger
+		  set('pulse37_time := 10^((log_pulse_last-log_pulse_first)/40 * 37 + log_pulse_first)')
+		%end_trigger	
+		%define_trigger
+		  set('pulse38_time := 10^((log_pulse_last-log_pulse_first)/40 * 38 + log_pulse_first)')
+		%end_trigger			
+		%define_trigger
+		  set('pulse39_time := 10^((log_pulse_last-log_pulse_first)/40 * 39 + log_pulse_first)')
+		%end_trigger		
+	%end_var
+	
+	%define_var('pulse1_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse2_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse3_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse4_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse5_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse6_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse7_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse8_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse9_time')
+	  type(int)
+		no_display
+	%end_var	
+	%define_var('pulse10_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse11_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse12_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse13_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse14_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse15_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse16_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse17_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse18_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse19_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse20_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse21_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse22_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse23_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse24_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse25_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse26_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse27_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse28_time')
+	  type(int)
+		no_display
+	%end_var	
+	%define_var('pulse29_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse30_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse31_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse32_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse33_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse34_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse35_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse36_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse37_time')
+	  type(int)
+		no_display
+	%end_var
+	%define_var('pulse38_time')
+	  type(int)
+		no_display
+	%end_var	
+	%define_var('pulse39_time')
+	  type(int)
+		no_display
+	%end_var		
+	
+%define_var('dark')
+    type(real)
+    caption('Dark Pause Between Samples (s)')
+    init_value(10)
+    minimum(1)
+	%define_trigger
+      condition('(1000*dark < pulse_last_time)')
+      set('dark := (pulse_last_time/1000) + (200/1000)')
+    %end_trigger     
+  %end_var
+%end_group
+
+;protocol body - generated by wizard
+;version ZB 10.01.27
+include default.inc  ;Includes standard options, do not remove it !
+include qa.inc;    ;Include qa command,do not remove it !
+Shutter=0
+Sensitivity=50
+;
+f0measurement = 1s
+;
+;**********************************************************************
+;
+Action QA_sample(delay) begin
+  measure_delay = trunc((0.5+1000000*delay) div 20000)
+  flash_delay = trunc(1000000*delay - measure_delay*20000)/1000000
+  <0s>=>QA(%actinic_flash%us,flash_delay)   ;delay in us
+  <TS>=>bit0H      
+  <measure_delay*TS+2*TS>=>fm 
+end
+;***********************************************************************
+;
+<0ms,200ms..f0measurement-2*TS>=>fm
+
+<0s>=>checkPoint,"startFo"
+<f0measurement-2*TS>=>checkPoint,"endFo"
+;
+;***********************************************************************
+;
+<f0measurement+2*TS>=>checkPoint,"startFm"
+;
+<f0measurement>=>QA_sample(%actinic_flash%us + %pulse_first_time%us)
+<f0measurement+%dark%*1>=>QA_sample(%actinic_flash%us + %pulse1_time%us)
+<f0measurement+%dark%*2>=>QA_sample(%actinic_flash%us + %pulse2_time%us)
+<f0measurement+%dark%*3>=>QA_sample(%actinic_flash%us + %pulse3_time%us)
+<f0measurement+%dark%*4>=>QA_sample(%actinic_flash%us + %pulse4_time%us)
+<f0measurement+%dark%*5>=>QA_sample(%actinic_flash%us + %pulse5_time%us)
+<f0measurement+%dark%*6>=>QA_sample(%actinic_flash%us + %pulse6_time%us)
+<f0measurement+%dark%*7>=>QA_sample(%actinic_flash%us + %pulse7_time%us)
+<f0measurement+%dark%*8>=>QA_sample(%actinic_flash%us + %pulse8_time%us)
+<f0measurement+%dark%*9>=>QA_sample(%actinic_flash%us + %pulse9_time%us)
+<f0measurement+%dark%*10>=>QA_sample(%actinic_flash%us + %pulse10_time%us)
+<f0measurement+%dark%*11>=>QA_sample(%actinic_flash%us + %pulse11_time%us)
+<f0measurement+%dark%*12>=>QA_sample(%actinic_flash%us + %pulse12_time%us)
+<f0measurement+%dark%*13>=>QA_sample(%actinic_flash%us + %pulse13_time%us)
+<f0measurement+%dark%*14>=>QA_sample(%actinic_flash%us + %pulse14_time%us)
+<f0measurement+%dark%*15>=>QA_sample(%actinic_flash%us + %pulse15_time%us)
+<f0measurement+%dark%*16>=>QA_sample(%actinic_flash%us + %pulse16_time%us)
+<f0measurement+%dark%*17>=>QA_sample(%actinic_flash%us + %pulse17_time%us)
+<f0measurement+%dark%*18>=>QA_sample(%actinic_flash%us + %pulse18_time%us)
+<f0measurement+%dark%*19>=>QA_sample(%actinic_flash%us + %pulse19_time%us)
+<f0measurement+%dark%*20>=>QA_sample(%actinic_flash%us + %pulse20_time%us)
+<f0measurement+%dark%*21>=>QA_sample(%actinic_flash%us + %pulse21_time%us)
+<f0measurement+%dark%*22>=>QA_sample(%actinic_flash%us + %pulse22_time%us)
+<f0measurement+%dark%*23>=>QA_sample(%actinic_flash%us + %pulse23_time%us)
+<f0measurement+%dark%*24>=>QA_sample(%actinic_flash%us + %pulse24_time%us)
+<f0measurement+%dark%*25>=>QA_sample(%actinic_flash%us + %pulse25_time%us)
+<f0measurement+%dark%*26>=>QA_sample(%actinic_flash%us + %pulse26_time%us)
+<f0measurement+%dark%*27>=>QA_sample(%actinic_flash%us + %pulse27_time%us)
+<f0measurement+%dark%*28>=>QA_sample(%actinic_flash%us + %pulse28_time%us)
+<f0measurement+%dark%*29>=>QA_sample(%actinic_flash%us + %pulse29_time%us)
+<f0measurement+%dark%*30>=>QA_sample(%actinic_flash%us + %pulse30_time%us)
+<f0measurement+%dark%*31>=>QA_sample(%actinic_flash%us + %pulse31_time%us)
+<f0measurement+%dark%*32>=>QA_sample(%actinic_flash%us + %pulse32_time%us)
+<f0measurement+%dark%*33>=>QA_sample(%actinic_flash%us + %pulse33_time%us)
+<f0measurement+%dark%*34>=>QA_sample(%actinic_flash%us + %pulse34_time%us)
+<f0measurement+%dark%*35>=>QA_sample(%actinic_flash%us + %pulse35_time%us)
+<f0measurement+%dark%*36>=>QA_sample(%actinic_flash%us + %pulse36_time%us)
+<f0measurement+%dark%*37>=>QA_sample(%actinic_flash%us + %pulse37_time%us)
+<f0measurement+%dark%*38>=>QA_sample(%actinic_flash%us + %pulse38_time%us)
+<f0measurement+%dark%*39>=>QA_sample(%actinic_flash%us + %pulse39_time%us)
+<f0measurement+%dark%*40>=>QA_sample(%actinic_flash%us + %pulse_last_time%ms)

@@ -1,0 +1,95 @@
+;protocol body - modified by ZB
+;version November 18, 2010
+;high-resolution CCD
+;
+TS=50ms
+include default.inc  ;Includes standard options, do not remove it !
+include light.inc  ;Includes standard options, do not remove it !
+
+Shutter=2
+Sensitivity=25
+FAR=75
+;----actinic light set to 160uE, combination of red and blue. Both at 45%
+Act2=34
+Act1=34
+Super=90
+
+;************************************************************************************************************
+Action SATPULSE begin
+  <-mfmsub_length>=>mfmsub ;before pulse
+  <0s>=>SatPulse(800ms)
+  <TS,TS + 2 * mfmsub_length .. 800ms/2 - mfmsub_length>=>mfmsub
+  <800ms/2,800ms/2 + mfmsub_length .. 800ms>=>mfmsub
+  <800ms + mfmsub_length>=>mfmsub
+end
+;
+Action MEASURE(end_time) begin
+  <800ms + 2*mfmsub_length,800ms + 2*mfmsub_length + 40 * mfmsub_length ..end_time - mfmsub_length>=>mfmsub
+end
+;
+Action FARREDILL(end_time) begin
+  <800ms + 4*mfmsub_length,800ms + 4*mfmsub_length + 40 * mfmsub_length ..end_time - 2 * mfmsub_length>=>FAR(38*mfmsub_length)
+end
+
+;-------------------------------------------------------------------------------------------------------------
+;*** Fo Measurement ******************************************************************************************
+;-------------------------------------------------------------------------------------------------------------
+F0duration=10s;
+F0period = 200ms
+<0,F0period..F0duration>=>mfmsub
+;
+;Fo definition
+<F0duration/2>=>checkPoint,"startFt_Lss"
+<F0duration - F0period>=>checkPoint,"endFt_Lss"
+<0s>=>act1(F0duration)
+<0s>=>act2(F0duration)
+;
+;-------------------------------------------------------------------------------------------------------------
+;*** Saturating Pulse & Fm Measurement ***********************************************************************
+;-------------------------------------------------------------------------------------------------------------
+PulseDuration=800ms;    ##   
+a1=F0duration + 2*mfmsub_length;   ##
+;
+
+<a1>=>SatPulse(PulseDuration)
+;
+<a1>=>mpulse
+;
+;Fm definition
+<a1 + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<a1 + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+;
+;Visual frame definition                                                - image shown in pre-processing window
+<a1 + PulseDuration/2 + TS>=>checkPoint,"timeVisual"
+
+;-------------------------------------------------------------------------------------------------------------
+;*** then a dark period with FR ******************************************************************************
+;-------------------------------------------------------------------------------------------------------------
+
+FoMeasureStart= a1 + PulseDuration + 2*mfmsub_length;
+
+FoPeriod=120s;
+
+<FoMeasureStart>=>MEASURE(FoPeriod)
+<FoMeasureStart>=>FARREDILL(FoPeriod-2s)
+
+FREnd=FoMeasureStart+FoPeriod
+
+<FREnd - 10s>=>checkPoint,"startFoPrime"
+<FREnd - 5s>=>checkPoint,"endFoPrime"
+
+;-------------------------------------------------------------------------------------------------------------
+;*** now a saturating pulse to probe Fm''  *******************************************************************
+;-------------------------------------------------------------------------------------------------------------
+a2=FREnd
+<a2>=>SatPulse(PulseDuration)
+;
+<a2>=>mpulse
+
+
+;<a2>=>SATPULSE
+;<a2>=>act1(PulseDuration)
+;<a2>=>act2(PulseDuration)
+<a2 + PulseDuration/2>=>checkPoint,"startFm_DP"
+<a2 + PulseDuration - mfmsub_length>=>checkPoint,"endFm_DP"
+<a2 + PulseDuration*2>=>mpulse

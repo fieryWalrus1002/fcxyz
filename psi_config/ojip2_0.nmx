@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- numerix -->
+<!-- basic unit is [ms] -->
+<NUMERIX>
+  <TERM type="none">
+    <FORMULA var="tFo" term="20us" accuracy="0" visible="false"/>
+	<FORMULA var="tFm" term="1000ms" accuracy="0" visible="false"/>
+	<FORMULA var="tLast" term="2s" accuracy="0" visible="false"/>  								
+  </TERM>		
+  <TERM type="none">
+	<FORMULA var="Fo" term="frame{tFo}" accuracy="0" visible="true" export="true" group="0"/>  								
+    <FORMULA var="Fj" term="frame{2ms}" accuracy="0" visible="true" export="true" group="0"/>  						
+    <FORMULA var="Fi" term="frame{20ms}" accuracy="0" visible="true" export="true" group="0"/>  								
+    <FORMULA var="Fp" term="frame{tFm})" accuracy="0" visible="false" export="true" group="0"/>  										
+    <FORMULA var="F300" term="frame{300us}" accuracy="0" visible="false" export="true" group="0"/>  												
+  </TERM>				
+  <TERM type="none">	
+    <FORMULA var="Fm" term="Fp" accuracy="0" visible="true" export="true" group="0"/> 
+    <FORMULA var="Fv" term="Fm - Fo" accuracy="0" visible="true" group="0"/>  										
+    <FORMULA var="Vi" term="(Fi-Fo)/Fv" accuracy="3" visible="true" group="1"/>
+    <FORMULA var="Vj" term="(Fj-Fo)/Fv" accuracy="3" visible="true" group="1"/>
+	<FORMULA var="Fv/Fm" term="Fv/Fm" accuracy="3" visible="true" group="1"/>  
+	<FORMULA var="Fm/Fo" term="Fm/Fo" accuracy="3" visible="true"/>  										
+    <FORMULA var="Fv/Fo" term="Fv/Fo" accuracy="3" visible="true"/>  																				
+  </TERM>
+  <TERM type="none">		
+    <FORMULA var="Mo" term="4*(F300-Fo)/(Fm-Fo)" accuracy="3" visible="true" group="2"/> 
+	<FORMULA var="Ss" term="Vj/Mo" accuracy="3" visible="true" group="2"/> 
+  </TERM>
+  <TERM type="none">		
+    <FORMULA var="Phi_Po" term="1-Fo/Fm" accuracy="3" visible="true" group="3"/> 																  
+    <FORMULA var="Psi_o" term="1-Vj" accuracy="3" visible="true" group="3"/>  																  		
+    <FORMULA var="Phi_Eo" term="(1-(Fo/Fm))*Psi_o" accuracy="3" visible="true" group="3"/>  																  				
+    <FORMULA var="Phi_Do" term="Fo/Fm" accuracy="3" visible="true" group="3"/>  
+	<FORMULA var="Pi_Abs" term="((1-Fo/Fm)/(Mo/Vj))*((Fm-Fo)/Fo)*((1-Vj)/Vj)" accuracy="3" visible="true" group="4"/>    	
+  </TERM>  	
+  <TERM type="none">		
+    <FORMULA var="ABS/RC" term="Mo*(1/Vj)*(1/Phi_Po)" accuracy="3" visible="true" group="5"/>  																  	  
+    <FORMULA var="TRo/RC" term="Mo*(1/Vj)" accuracy="3" visible="true" group="5"/> 																  	  		
+    <FORMULA var="ETo/RC" term="Mo*(1/Vj)*Psi_o" accuracy="3" visible="true" group="5"/>  																  	  				
+    <FORMULA var="DIo/RC" term="(Mo*(1/Vj)*(1/Phi_Po))-(Mo*(1/Vj))" accuracy="3" visible="true" group="5"/>  																  	  						
+  </TERM>  
+</NUMERIX>

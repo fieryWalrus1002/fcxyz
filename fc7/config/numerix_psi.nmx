@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- numerix -->
+<NUMERIX>
+
+  <TERM type="repeat">
+    <EXIST name="time%d"/>
+    <FORMULA var="IR%d" term="a * irframe{time%d} + b + 273.15" accuracy="2" export="true" visible="false" group="0"/>
+  </TERM>
+  
+  <TERM type="none">
+    <EXIST name="reftime"/>    
+    <FORMULA var="REF" term="a * irframe{reftime} + b + 273.15" accuracy="2" export="true" visible="false" group="0"/>
+  </TERM>
+    
+  <TERM type="repeat">
+    <EXIST name="IR%d"/>
+    <FORMULA var="T%d" term="1/(1/IR%d + 10/14390 * log(c/0.99)) - 273.15" accuracy="2" visible="true" group="1"/>
+  </TERM>
+  
+  <TERM type="none">
+    <EXIST name="REF"/>
+    <FORMULA var="TREF" term="1/(1/REF + 10/14390 * log(c/0.99)) - 273.15" accuracy="2" visible="true" group="1"/>
+  </TERM>
+  
+  <TERM type="repeat">
+    <EXIST name="T%d"/>
+    <EXIST name="TREF"/>    
+    <FORMULA var="TSUB%d" term="T%d - TREF" accuracy="2" visible="true" group="2"/>
+  </TERM>
+  
+
+  <TERM type="none">
+    <EXIST name="timeVisual"/>
+    <FORMULA var="Visual" term="frame{timeVisual}" accuracy="2" visible="false"/>
+  </TERM>
+
+  <!-- Fo definition -->
+  <TERM type="none">
+    <EXIST name="startFo"/>
+    <NOEXIST name="endFo"/>
+    <FORMULA var="Fo" term="frame{startFo}" accuracy="2" visible="true" export="true" group="0"/>
+  </TERM>
+  <TERM type="none">
+    <EXIST name="startFo"/>
+    <EXIST name="endFo"/>
+    <FORMULA var="Fo" term="average(frame,startFo,endFo)" accuracy="2" visible="true" export="true" group="0"/>
+  </TERM>
+
+  <!-- Fm definition -->
+  <TERM type="none">
+    <EXIST name="startFm"/>
+    <NOEXIST name="endFm"/>
+    <FORMULA var="Fm" term="frame{startFm}" accuracy="2" visible="true" export="true" group="0"/>
+  </TERM>
+  <TERM type="none">
+    <EXIST name="startFm"/>
+    <EXIST name="endFm"/>
+    <FORMULA var="Fm" term="average(frame,startFm,endFm)" accuracy="2" visible="true" export="true" group="0"/>
+  </TERM>
+
+  <!-- Fp definition -->
+  <TERM type="none">
+    <EXIST name="startFp"/>
+    <EXIST name="endFp"/>
+    <FORMULA var="Fp" term="max(frame,startFp,endFp)" accuracy="2" visible="true" export="true" group="0"/>
+  </TERM>
+
+ <!-- Fv definition -->
+  <TERM type="none">
+    <EXIST name="startFo"/>
+    <EXIST name="startFp"/>
+    <EXIST name="endFp"/>
+    <FORMULA var="Fv" term="Fp - Fo" accuracy="2" visible="false"/>
+    <FORMULA var="Fv/Fp" term="Fv/Fp" accuracy="3" visible="true"/>
+  </TERM>
+
+  <!-- Fv definition -->
+  <TERM type="none">
+    <EXIST name="startFo"/>
+    <EXIST name="startFm"/>
+    <FORMULA var="Fv" term="Fm - Fo" accuracy="2" visible="false"/>
+    <FORMULA var="Fv/Fm" term="Fv/Fm" accuracy="3" visible="true"/>
+  </TERM>
+
+  <!-- Fm'(x) definition -->
+  <TERM type="repeat">
+    <EXIST name="startFm'%d"/>
+    <NOEXIST name="endFm'%d"/>
+    <FORMULA var="Fm'%d" term="frame{startFm'%d}" accuracy="2" visible="true" export="true" group="1"/>
+  </TERM>
+
+  <!-- Fm'(x) definition -->
+  <TERM type="repeat">
+    <EXIST name="startFm'%d"/>
+    <EXIST name="endFm'%d"/>
+    <FORMULA var="Fm'%d" term="average(frame,startFm'%d,endFm'%d)" accuracy="2" visible="true" export="true" group="1"/>
+  </TERM>
+
+  <!-- Ft'(x) definition -->
+  <TERM type="repeat">
+    <EXIST name="startFt'%d"/>
+    <FORMULA var="Ft'%d" term="frame{startFt'%d}" accuracy="2" visible="true" export="true" group="2"/>
+  </TERM>
+
+
+  <!-- Fo'(x) = Fo/(Fv/Fm+Fo/Fm'(x)) -->
+  <!-- Fv'(x)=Fm'(x)-Fo'(x) -->
+  <TERM type="repeat">
+    <EXIST name="startFo"/>
+    <EXIST name="startFm"/>
+    <EXIST name="startFm'%d"/>
+    <FORMULA var="Fo'%d" term="Fo/(Fv/Fm + Fo/Fm'%d)" accuracy="2" visible="true" group="3"/>
+    <FORMULA var="Fv'%d" term="Fm'%d - Fo'%d" accuracy="2" show="false" group="4"/>
+  </TERM>
+
+
+  <!-- Fq'(x) = Fm'(x)-Ft'(x) -->
+  <!-- GENTY(x) = Fq'(x) / Fm'(x) -->
+  <TERM type="repeat">
+    <EXIST name="startFm'%d"/>
+    <EXIST name="startFt'%d"/>
+    <FORMULA var="Fq'%d" term="Fm'%d - Ft'%d" accuracy="2" visible="true" group="5"/>
+    <FORMULA var="GENTY%d" term="Fq'%d/Fm'%d" accuracy="2" visible="true" group="6"/>
+  </TERM>
+
+  <!-- Fq'(x)/Fv'(x)  -->
+  <!-- q(x) =Fv'(x)/Fm'(x) -->
+  <TERM type="repeat">
+    <EXIST name="startFm'%d"/>
+    <EXIST name="startFo'%d"/>
+    <EXIST name="startFt'%d"/>
+    <FORMULA var="Fq'%d/Fv'%d" term="Fq'%d/Fv'%d" accuracy="2" visible="true" group="7"/> 
+    <FORMULA var="q%d" term="Fv'%d/Fm'%d" accuracy="2" visible="true" group="8"/> 
+  </TERM>
+
+  <!-- QNP(x) = Fm-Fm'(x) -->
+  <!-- q(x)=QNP(x)/Fm   -->
+  <!-- NPQ(x) = QNP(x)/Fm'(x)   -->
+  <TERM type="repeat">
+    <EXIST name="startFm"/>
+    <EXIST name="startFm'%d"/>
+    <FORMULA var="QNP%d" term="Fm - Fm'%d" accuracy="2" visible="true" group="9"/> 
+    <FORMULA var="qnp%d" term="QNP%d/Fm" accuracy="2" visible="true" group="10"/> 
+    <FORMULA var="qP%d" term="QNP%d/Fm'%d" accuracy="2" visible="true" group="11"/> 
+  </TERM>
+	
+	<TERM type="none">
+	  <EXIST name="A_start"/>
+		<EXIST name="A_last"/>
+		<FORMULA var="r" term="0.8*((float)frame{A_last}-(float)frame{A_start}) - 1000" accuracy="2" visible="true"/>
+	</TERM>
+	
+</NUMERIX>
+

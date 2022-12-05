@@ -1,40 +1,32 @@
-include default.inc;
-include light.inc;
-;------------------------------------------------
-;protocol: test_protocol
-;notes: test protocol
-;created: 2022-11-29 08:10:34.807797
-;------------------------------------------------
-TS=20ms
-Shutter=3
-Sensitivity=52
-Act1=60
-Act2=70
-Super=100
-
-;------------------------------------------------
-;-----------------  Actions --------------------
-;------------------------------------------------
-Action SATPULSE(end_time) begin
-<-mfmsub_length>=>mfmsub
-<0s>=>act1(800ms)
-<0s>=>act2(800ms)
-<0s,TS + 2 * mfmsub_length .. end_time>=>mfmsub
-<end_time + mfmsub_length>=>mfmsub
+;protocol body - modified by ZB
+;version November 18, 2010
+;high-resolution CCD
+TS=50ms
+include default.inc  ;Includes standard options, do not remove it !
+include light.inc  ;Includes standard options, do not remove it !
+Shutter=2
+Sensitivity=25
+FAR=75
+;----actinic light set to 160uE, combination of red and blue. Both at 45%
+Act2=34
+Act1=34
+Super=90;************************************************************************************************************
+Action SATPULSE begin
+ <-mfmsub_length>=>mfmsub ;before pulse
+ <0s>=>SatPulse(800ms)
+ <TS,TS + 2 * mfmsub_length .. 800ms/2 - mfmsub_length>=>mfmsub
+ <800ms/2,800ms/2 + mfmsub_length .. 800ms>=>mfmsub
+ <800ms + mfmsub_length>=>mfmsub
 end
-Action FARRED_MEASURE(end_time) begin
-<0s, 20ms, .. end_time - mfmsub_length>=>FAR(20ms - 2*mfmsub_length)
-<20ms - 2*mfmsub_length, 20ms, .. end_time - mfmsub_length>=>mfmsub
-end
+;
 Action MEASURE(end_time) begin
-<20ms - 2*mfmsub_length, 20ms, .. end_time - mfmsub_length>=>mfmsub
+  <800ms + 2*mfmsub_length,800ms + 2*mfmsub_length + 40 * mfmsub_length ..end_time - mfmsub_length>=>mfmsub
 end
-
-
-;------------------------------------------------
-;--------------  Start Protocol -----------------
-;------------------------------------------------
-
+;
+Action FARREDILL(end_time) begin
+  <800ms + 4*mfmsub_length,800ms + 4*mfmsub_length + 40 * mfmsub_length ..end_time - 2 * mfmsub_length>=>FAR(38*mfmsub_length)
+end
+;
 
 <10.0s>=>act1(10.0s);
 <10.0s>=>act2(10.0s);

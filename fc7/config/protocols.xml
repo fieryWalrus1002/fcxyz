@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DEVICES>
+  <DEVICE id="2000">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/>  
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/>   
+  </DEVICE>
+  
+  <DEVICE id="2001">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/>  
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/>   
+  </DEVICE>
+  
+  <DEVICE id="2002">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/>  
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/>   
+  </DEVICE>
+  
+  <DEVICE id="2003">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/>  
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/>   
+  </DEVICE>
+  
+  <DEVICE id="2004">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/> 
+	<PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2.p"/>
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs12.p"/> 
+  </DEVICE>
+  
+   <DEVICE id="2005">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/> 
+  </DEVICE>
+  
+  <DEVICE id="2006">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/> 
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR21.p"/>
+	<PROTOCOL caption="QA_reoxidation" file="qa_rxd-USB.p"/> 	
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+  
+  <DEVICE id="2007">
+   <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+   <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+   <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/> 
+   <PROTOCOL caption="GFP 1" file="Dyes&FPs1.p"/> 
+   <PROTOCOL caption="GFP 2" file="Dyes&FPs1Flash.p"/> 
+   <PROTOCOL caption="Green reflectance" file="Reflectance3.p"/>           
+  </DEVICE>
+  
+  <DEVICE id="2008">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/> 	
+  </DEVICE>
+  
+  <DEVICE id="2009">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/> 	
+  </DEVICE>
+  
+  <DEVICE id="2010">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 	
+	<PROTOCOL caption="Dyes & FPs - UV" file="Dyes&FPs-UV.p"/> 	
+  </DEVICE>
+
+  <DEVICE id="2011">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 	
+	<PROTOCOL caption="NDVI-test" file="NDVI-Handy2011.p"/> 	
+  </DEVICE>
+  
+  <DEVICE id="2100">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/>  
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/>   
+  </DEVICE>
+  
+  <DEVICE id="2101">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/>  
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/>   
+  </DEVICE>
+  
+  <DEVICE id="2200">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1.p"/> 	
+  </DEVICE>
+
+  <DEVICE id="2201">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 	
+	<PROTOCOL caption="Dyes & FPs - UV" file="Dyes&FPs-UV.p"/>
+  </DEVICE>
+  
+    <DEVICE id="2207">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 	
+	<PROTOCOL caption="Dyes & FPs - UV" file="Dyes&FPs-UV.p"/>
+  </DEVICE>
+
+  <DEVICE id="2209">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1.p"/>            
+  </DEVICE>
+  
+   <DEVICE id="2300">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2.p"/>
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 	
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+  
+  <DEVICE id="2301">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 	
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+  
+  <DEVICE id="2302">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2.p"/>
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 	
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+  
+  <DEVICE id="2303">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 	
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+
+  <DEVICE id="2304">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 	
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+
+  <DEVICE id="2305">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2.p"/>
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/>
+    <PROTOCOL caption="QA_reoxidation" file="qa_rxd-USB.p"/>
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+
+  <DEVICE id="2306">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+    <PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/>
+    <PROTOCOL caption="QA_reoxidation" file="qa_rxd-USB.p"/>
+    <PROTOCOL caption="OJIP" file="OJIP-USB.p"/>
+  </DEVICE>
+
+  <DEVICE id="2307">
+   	 <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Kautsky - Act3" file="Kautsky3.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/> 
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/>
+	<PROTOCOL caption="Quenching - Act3" file="Quenching-without-FR3.p"/> 
+  </DEVICE>
+    
+  <DEVICE id="2308">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+    <PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/>
+    <PROTOCOL caption="QA_reoxidation" file="qa_rxd-USB.p"/>
+  </DEVICE>
+  
+  <DEVICE id="2309">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+    <PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/>  
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+    <PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+  
+
+  <DEVICE id="2400">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 	
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>
+  
+  <DEVICE id="2401">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 	
+      <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>  
+
+  <DEVICE id="2402">
+    <PROTOCOL caption="FV/Fm" file="fvfm.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1.p"/>  
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2.p"/> 	
+      <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2.p"/>
+  </DEVICE>  
+  
+  <DEVICE id="2500">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/> 
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+	<PROTOCOL caption="GFP" file="Dyes&FPs2-Lucam.p"/>
+  </DEVICE>
+  
+   <DEVICE id="2501">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2-Lucam.p"/>
+	<PROTOCOL caption="GFP" file="Dyes&FPs2-Lucam.p"/>
+	<PROTOCOL caption="PAR" file="PAR.p"/>
+   </DEVICE>
+
+   <DEVICE id="2502">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+	<PROTOCOL caption="GFP" file="Dyes&FPs2-Lucam.p"/>
+   </DEVICE>
+
+   <DEVICE id="2503">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+    	<PROTOCOL caption="QA_reoxidation" file="qa_rxd-LU.p"/>
+	<PROTOCOL caption="GFP" file="Dyes&FPs2-Lucam.p"/>
+   </DEVICE>
+
+<DEVICE id="2504">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1-Lucam.p"/>
+   	<PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2-Lucam.p"/>
+	<PROTOCOL caption="PAR" file="PAR.p"/>
+	<PROTOCOL caption="GFP" file="Dyes&FPs2-Lucam.p"/>
+   </DEVICE>
+   
+   <DEVICE id="2507">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+    	<PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1.p"/>
+	<PROTOCOL caption="Dyes & FP - Act1" file="Dyes&FPs1-Lucam.p"/>
+   </DEVICE>
+   
+  <DEVICE id="2509">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam-Mic.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1-LU-Mic.p"/> 
+	<PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1-LU-Mic.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1-LU-Mic.p"/>            
+    <PROTOCOL caption="Dyes & FPs - Act1" file="Dyes&FPs1-LU-Mic.p" leftcolor="0x0000ff"/> 	
+	<PROTOCOL caption="Dyes & FPs - UV" file="Dyes&FPsUV-LU-Mic.p" leftcolor="0x0000ff"/>
+  </DEVICE> 
+  
+  <DEVICE id="2510">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+    <PROTOCOL caption="Kautsky" file="Kautsky1-Lucam.p"/> 
+    <PROTOCOL caption="Quenching with FAR" file="Quenching-with-FR1-Lucam.p"/>
+    <PROTOCOL caption="Quenching" file="Quenching-without-FR1-Lucam.p"/>            
+    <PROTOCOL caption="Dyes & FPs" file="Dyes&FPs1-Lucam.p"/> 
+  </DEVICE>
+  
+  <DEVICE id="2512">
+     <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+     <PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+     <PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+     <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+     <PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1-Lucam.p"/>
+     <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+     <PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2-Lucam.p"/>
+  </DEVICE>
+  
+
+ <DEVICE id="2600"/>  
+	   
+ <DEVICE id="2700">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+	<PROTOCOL caption="Dyes & FP - Act1" file="Dyes&FPs1-Lucam.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2-Lucam.p"/>
+   </DEVICE> 
+
+   <DEVICE id="2701">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+	<PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+	<PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1-Lucam.p"/>
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+	<PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2-Lucam.p"/>
+	<PROTOCOL caption="Dyes & FP - Act1" file="Dyes&FPs1-Lucam.p"/> 
+	<PROTOCOL caption="Dyes & FPs - Act2" file="Dyes&FPs2-Lucam.p"/>
+   </DEVICE>
+   
+  <DEVICE id="2702">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/> 
+    <PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+  </DEVICE>
+   
+   
+  <DEVICE id="2703">
+     <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+     <PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+     <PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+     <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+     <PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1-Lucam.p"/>
+     <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+     <PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2-Lucam.p"/>
+  </DEVICE>
+  
+  <DEVICE id="2704">
+    <PROTOCOL caption="FV/Fm" file="FvFm-Lucam.p"/>
+    <PROTOCOL caption="Kautsky - Act1" file="Kautsky1-Lucam.p"/>
+    <PROTOCOL caption="Kautsky - Act2" file="Kautsky2-Lucam.p"/>
+    <PROTOCOL caption="Quenching - Act1" file="Quenching-without-FR1-Lucam.p"/>
+    <PROTOCOL caption="Quenching with FAR - Act1" file="Quenching-with-FR1-Lucam.p"/>
+    <PROTOCOL caption="Quenching - Act2" file="Quenching-without-FR2-Lucam.p"/>
+    <PROTOCOL caption="Quenching with FAR - Act2" file="Quenching-with-FR2-Lucam.p"/>
+  </DEVICE>
+
+   
+
+  </DEVICES>

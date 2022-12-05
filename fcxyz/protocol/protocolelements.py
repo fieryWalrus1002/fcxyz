@@ -5,6 +5,44 @@ from dataclasses import dataclass
 
 
 @dataclass
+class LightValue:
+    blue: int
+    red: int
+
+    @property
+    def act1(self):
+        return self.red
+
+    @property
+    def act2(self):
+        return self.blue
+
+
+@dataclass
+class TimeValue:
+    value: float
+    unit: str
+
+    @property
+    def time(self):
+        return self._calulate_time()
+
+    @property
+    def time_string(self):
+        return f"{self.value}{self.unit}"
+
+    def _calulate_time(self):
+        if self.unit == "m":
+            return self.value * 60.0
+        elif self.unit == "s":
+            return self.value
+        elif self.unit == "ms":
+            return self.value / 1000.0
+        else:
+            raise ValueError(f"Invalid time unit {self.unit}")
+
+
+@dataclass
 class Variable:
     """A dataclass that contains a paired variable name and a list of its assigned values.
 

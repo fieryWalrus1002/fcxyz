@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- numerix -->
+<!-- Verze LN051203 -->
+
+<NUMERIX>
+
+<!-- @@@@ DARK ADAPTED -->
+
+<!-- **** Fo SINGLE -->
+  <TERM type="none">
+    <EXIST name="startFo"/>
+    <NOEXIST name="endFo"/>
+    <FORMULA var="Fo" term="frame{startFo}" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fo AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFo"/>
+    <EXIST name="endFo"/>
+    <FORMULA var="Fo" term="average(frame,startFo,endFo)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+
+<!-- **** FoPrime AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFoPrime"/>
+    <EXIST name="endFoPrime"/>
+    <FORMULA var="FoPrime" term="average(frame,startFoPrime,endFoPrime)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Baker FoPrime -->
+  <TERM type="none">
+    <EXIST name="Fo"/>
+    <EXIST name="Fv"/>
+    <EXIST name="Fm"/>
+    <EXIST name="Fm_Lss"/>
+    <FORMULA var="Fopb" term="Fo/((Fv/Fm) + (Fo/Fm_Lss))" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+
+<!-- **** Fm SINGLE -->
+  <TERM type="none">
+    <EXIST name="startFm"/>
+    <NOEXIST name="endFm"/>
+    <FORMULA var="Fm" term="frame{startFm}" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fm AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFm"/>
+    <EXIST name="endFm"/>
+    <FORMULA var="Fm" term="average(frame,startFm,endFm)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fm double prime -->
+  <TERM type="none">
+    <EXIST name="startFm_DP"/>
+    <EXIST name="endFm_DP"/>
+    <FORMULA var="Fm_DP" term="average(frame,startFm_DP,endFm_DP)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+
+<!-- **** Fm2 relax AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFm2"/>
+    <EXIST name="endFm2"/>
+    <FORMULA var="Fm2" term="average(frame,startFm2,endFm2)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!--  **** Fv definition -->
+  <TERM type="none">
+    <EXIST name="Fo"/>
+    <EXIST name="Fm"/>
+    <FORMULA var="Fv" term="Fm - Fo" accuracy="3" visible="true"/>
+  </TERM>
+
+<!--  **** Fv2 definition -->
+  <TERM type="none">
+    <EXIST name="Fo_r2"/>
+    <EXIST name="Fm2"/>
+    <FORMULA var="Fv2" term="Fm2 - Fo_r2" accuracy="3" visible="true"/>
+  </TERM>
+
+<!-- **** Ft AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFt"/>
+    <EXIST name="endFt"/>
+    <FORMULA var="Ft" term="average(frame,startFt,endFt)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>  
+
+<!-- **** Fo before pulse -->
+  <TERM type="none">
+    <EXIST name="Fo_relax1"/>
+    <NOEXIST name="end_Fo_relax1"/>
+    <FORMULA var="Fo_r1" term="frame{Fo_relax1}" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fo before second pulse with FR -->
+  <TERM type="none">
+    <EXIST name="Fo_relax2"/>
+    <NOEXIST name="end_Fo_relax2"/>
+    <FORMULA var="Fo_r2" term="frame{Fo_relax2}" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!--  @@@@ DYNAMICS IN LIGHT -->
+
+
+<!--  **** Ffr average of two points -->
+  <TERM type="none">
+    <EXIST name="start_Ffr"/>
+    <EXIST name="end_Ffr"/>
+    <FORMULA var="Ffr" term="average(frame,start_Ffr,end_Ffr)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!--  **** Fp SINGLE -->
+  <TERM type="none">
+    <EXIST name="startFp"/>
+    <NOEXIST name="endFp"/>
+    <FORMULA var="Fp" term="frame{startFp}" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!--  **** relaxone -->
+  <TERM type="none">
+    <EXIST name="relaxone"/>
+    <FORMULA var="rlx_1" term="frame{relaxone}" accuracy="3" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxone adj -->
+  <TERM type="none">
+    <EXIST name="rlx_1"/>
+    <EXIST name="Fo_r1"/>
+    <FORMULA var="rlx_1n" term="(rlx_1 - Fo_r1)/(Fm - Fo_r1)" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxtwo -->
+  <TERM type="none">
+    <EXIST name="relaxtwo"/>
+    <FORMULA var="rlx_2" term="frame{relaxtwo}" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxtwo adj -->
+  <TERM type="none">
+    <EXIST name="rlx_2"/>
+    <EXIST name="Fo_r1"/>
+    <FORMULA var="rlx_2n" term="(rlx_2 - Fo_r1)/(Fm - Fo_r1)" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxthree -->
+  <TERM type="none">
+    <EXIST name="relaxthree"/>
+    <FORMULA var="rlx_3" term="frame{relaxthree}" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxthree adj -->
+  <TERM type="none">
+    <EXIST name="rlx_3"/>
+    <EXIST name="Fo_r1"/>
+    <FORMULA var="rlx_3n" term="(rlx_3 - Fo_r1)/(Fm - Fo_r1)" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxpone -->
+  <TERM type="none">
+    <EXIST name="relaxpone"/>
+    <FORMULA var="rlxp_1" term="frame{relaxpone}" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxpone adj -->
+  <TERM type="none">
+    <EXIST name="rlxp_1"/>
+    <EXIST name="Fo_r2"/>
+    <FORMULA var="rlxp_1n" term="(rlxp_1 - Fo_r2)/(Fm2 - Fo_r2)" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxptwo -->
+  <TERM type="none">
+    <EXIST name="relaxptwo"/>
+    <FORMULA var="rlxp_2" term="frame{relaxptwo}" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxptwo adj -->
+  <TERM type="none">
+    <EXIST name="rlxp_2"/>
+    <EXIST name="Fo_r2"/>
+    <FORMULA var="rlxp_2n" term="(rlxp_2 - Fo_r2)/(Fm2 - Fo_r2)" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxpthree -->
+  <TERM type="none">
+    <EXIST name="relaxpthree"/>
+    <FORMULA var="rlxp_3" term="frame{relaxpthree}" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** relaxpthree adj -->
+  <TERM type="none">
+    <EXIST name="rlxp_3"/>
+    <EXIST name="Fo_r2"/>
+    <FORMULA var="rlxp_3n" term="(rlxp_3 - Fo_r2)/(Fm2 - Fo_r2)" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** Fp MAX -->
+  <TERM type="none">
+    <EXIST name="startFp"/>
+    <EXIST name="endFp"/>
+    <FORMULA var="Fp" term="max(frame,startFp,endFp)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!--  **** Fv definition from Fp-->
+  <TERM type="none">
+    <EXIST name="Fo"/>
+    <EXIST name="Fp"/>
+    <NOEXIST name="Fm"/>
+    <FORMULA var="Fv" term="Fp - Fo" accuracy="3" visible="true"/>
+  </TERM>
+
+<!--  **** Fm_L(x) SINGLE -->
+  <TERM type="repeat">
+    <EXIST name="startFm_L%d"/>
+    <NOEXIST name="endFm_L%d"/>
+    <FORMULA var="Fm_L%d" term="frame(startFm_L%d,)" accuracy="3" visible="true" export="true" group="1"/>
+  </TERM>
+
+<!--  **** Fm_L(x) AVERAGED -->
+  <TERM type="repeat">
+    <EXIST name="startFm_L%d"/>
+    <EXIST name="endFm_L%d"/>
+    <FORMULA var="Fm_L%d" term="average(frame,startFm_L%d,endFm_L%d)" accuracy="3" visible="true" export="true" group="1"/>
+  </TERM>
+
+<!--  **** Fm_Lss SINGLE -->
+  <TERM type="none">
+    <EXIST name="startFm_Lss"/>
+    <NOEXIST name="endFm_Lss"/>
+    <FORMULA var="Fm_Lss" term="frame(startFm_Lss)" accuracy="3" visible="true" export="true" group="1"/>
+  </TERM>
+
+<!--  **** Fm_Lss AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFm_Lss"/>
+    <EXIST name="endFm_Lss"/>
+    <FORMULA var="Fm_Lss" term="average(frame,startFm_Lss,endFm_Lss)" accuracy="3" visible="true" export="true" group="1"/>
+  </TERM>
+
+<!--  **** Fm_D(x) AVERAGED -->
+  <TERM type="repeat">
+    <EXIST name="startFm_D%d"/>
+    <EXIST name="endFm_D%d"/>
+    <FORMULA var="Fm_D%d" term="average(frame,startFm_D%d,endFm_D%d)" accuracy="3" visible="true" export="true" group="1"/>
+  </TERM>
+  
+<!--  **** Ft_L(x) SINGLE -->
+  <TERM type="repeat">
+    <EXIST name="startFt_L%d"/>
+    <NOEXIST name="endFt_L%d"/>
+    <FORMULA var="Ft_L%d" term="frame{startFt_L%d}" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+
+
+<!--  **** Ft_L(x) AVERAGED -->
+  <TERM type="repeat">
+    <EXIST name="startFt_L%d"/>
+    <EXIST name="endFt_L%d"/>
+    <FORMULA var="Ft_L%d" term="average(frame,startFt_L%d,endFt_L%d)" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+
+<!--  **** Ft_Lss SINGLE -->
+  <TERM type="none">
+    <EXIST name="startFt_Lss"/>
+    <NOEXIST name="endFt_Lss"/>
+    <FORMULA var="Ft_Lss" term="frame{startFt_Lss}" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+
+<!--  **** Ft_Lss AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFt_Lss"/>
+    <EXIST name="endFt_Lss"/>
+    <FORMULA var="Ft_Lss" term="average(frame,startFt_Lss,endFt_Lss)" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+
+  <!--  **** Ft_D(x) SINGLE -->
+  <TERM type="repeat">
+    <EXIST name="startFt_D%d"/>
+    <NOEXIST name="endFt_D%d"/>
+    <FORMULA var="Ft_D%d" term="frame{startFt_D%d}" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+
+<!--  **** Ft_D(x) AVERAGED -->
+  <TERM type="repeat">
+    <EXIST name="startFt_D%d"/>
+    <EXIST name="endFt_D%d"/>
+    <FORMULA var="Ft_D%d" term="average(frame,startFt_D%d,endFt_D%d)" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+
+
+ <!--  **** Fo_L(x) SINGLE -->
+  <TERM type="repeat">	
+	<EXIST name="Fo"/>
+    <EXIST name="Fm"/>		
+	<EXIST name="Fm_L%d"/>		
+	<FORMULA var="Fo_L%d" term="Fo/((Fv/Fm) + (Fo/Fm_L%d))" accuracy="3" visible="true" export="true" group="2"/>		 
+  </TERM>  
+  
+ <!--  **** Fo_Lss SINGLE -->
+  <TERM type="none">
+    <EXIST name="startFo_Lss"/>
+    <NOEXIST name="endFo_Lss"/>
+    <FORMULA var="Fo_Lss" term="frame{startFo_Lss}" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+  
+<!--  **** Fo_Lss AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFo_Lss"/>
+    <EXIST name="endFo_Lss"/>
+    <FORMULA var="Fo_Lss" term="average(frame,startFo_Lss,endFo_Lss)" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+  
+   <TERM type="none">	
+	<EXIST name="Fo"/>
+    <EXIST name="Fm"/>		
+	<EXIST name="startFm_Lss"/>		
+	<NOEXIST name="startFo_Lss"/>
+    <FORMULA var="Fo_Lss" term="Fo/((Fv/Fm) + (Fo/Fm_Lss))" accuracy="3" visible="true" export="true" group="2"/>		 
+  </TERM>
+  
+<!--  **** Fo_D(x) SINGLE -->
+  <TERM type="repeat">
+    <EXIST name="startFo_D%d"/>
+    <NOEXIST name="endFo_D%d"/>
+    <FORMULA var="Fo_D%d" term="frame{startFo_D%d}" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+
+
+<!--  **** Fo_D(x) AVERAGED -->
+  <TERM type="repeat">
+    <EXIST name="startFo_D%d"/>
+    <EXIST name="endFo_D%d"/>
+    <FORMULA var="Fo_D%d" term="average(frame,startFo_D%d,endFo_D%d)" accuracy="3" visible="true" export="true" group="2"/>
+  </TERM>
+	
+  <TERM type="repeat">	
+	  <EXIST name="Fo"/>
+    <EXIST name="Fm"/>		
+	  <EXIST name="startFm_D%d"/>		
+	  <NOEXIST name="startFo_D%d"/>
+    <FORMULA var="Fo_D%d" term="Fo/(Fv/Fm + Fo/Fm_D%d)" accuracy="3" visible="true" export="true" group="2"/>		 
+  </TERM>	
+
+<!-- **** Ft_1 SINGLE -->
+  <TERM type="none">
+    <EXIST name="startFt_1"/>
+    <NOEXIST name="endFt_1"/>
+    <FORMULA var="Ft_1" term="frame{startFt_1}" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Ft_2 SINGLE -->
+  <TERM type="none">
+    <EXIST name="startFt_2"/>
+    <NOEXIST name="endFt_2"/>
+    <FORMULA var="Ft_2" term="frame{startFt_2}" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+	
+<!-- **** Ft_1 AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFt_1"/>
+    <EXIST name="endFt_1"/>
+    <FORMULA var="Ft_1" term="average(frame,startFt_1,endFt_1)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Ft_2 AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFt_2"/>
+    <EXIST name="endFt_2"/>
+    <FORMULA var="Ft_2" term="average(frame,startFt_2,endFt_2)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>	
+
+<!-- **** Subtraction  of Ft_1-Ft_2  -->
+  <TERM type="none">
+    <EXIST name="Ft_1"/>
+    <EXIST name="Ft_2"/>
+    <FORMULA var="Ft_1-Ft_2" term="Ft_1-Ft_2" accuracy="3" visible="true"/>
+  </TERM>	
+
+<!-- @@@@ STATE TRANSITION STUFF -->
+
+<!-- **** Fm1_st AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFm1_st"/>
+    <EXIST name="endFm1_st"/>
+    <FORMULA var="Fm1_st" term="average(frame,startFm1_st,endFm1_st)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fs1_st AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFs1_st"/>
+    <EXIST name="endFs1_st"/>
+    <FORMULA var="Fs1_st" term="average(frame,startFs1_st,endFs1_st)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fm2_st AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFm2_st"/>
+    <EXIST name="endFm2_st"/>
+    <FORMULA var="Fm2_st" term="average(frame,startFm2_st,endFm2_st)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fs2_st AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFs2_st"/>
+    <EXIST name="endFs2_st"/>
+    <FORMULA var="Fs2_st" term="average(frame,startFs2_st,endFs2_st)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fm3_st AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFm3_st"/>
+    <EXIST name="endFm3_st"/>
+    <FORMULA var="Fm3_st" term="average(frame,startFm3_st,endFm3_st)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- **** Fs3_st AVERAGED -->
+  <TERM type="none">
+    <EXIST name="startFs3_st"/>
+    <EXIST name="endFs3_st"/>
+    <FORMULA var="Fs3_st" term="average(frame,startFs3_st,endFs3_st)" accuracy="3" visible="true" export="true" group="0"/>
+  </TERM>
+
+<!-- @@@@ CALCULATED PARAMETERS-->
+
+<!--  ****qT = (Fm1_st - Fm2_st)/Fm2_st -->
+  <TERM type="none">
+    <EXIST name="Fm1_st"/>
+    <EXIST name="Fm2_st"/>
+    <FORMULA var="qT" term="(Fm1_st - Fm2_st)/Fm2_st" accuracy="4" visible="true" export="true" group="0"/>
+  </TERM>
+
+
+<!--  ****(Ffr-Fo)/Fv -->
+  <TERM type="none">
+    <EXIST name="Fo"/>
+    <EXIST name="Fm"/>
+    <EXIST name="Ffr"/>
+    <FORMULA var="deltaFfr" term="(Ffr - Fo)/Fv" accuracy="5" visible="true" export="true" group="1"/>
+  </TERM>
+  
+
+<!--  **** total dif -->
+  <TERM type="none">
+    <EXIST name="rlx_1"/>
+    <EXIST name="rlxp_1"/>
+    <EXIST name="rlx_2"/>
+    <EXIST name="rlxp_2"/>
+    <EXIST name="rlx_3"/>
+    <EXIST name="rlxp_3"/>
+    <EXIST name="Fo_r1"/>
+    <EXIST name="Fo_r2"/>
+    <FORMULA var="totdif" term="(((rlx_1 - Fo_r1)/(Fm - Fo_r1)) - ((rlxp_1 - Fo_r2)/(Fm2 - Fo_r2))) + (((rlx_2 - Fo_r1)/(Fm - Fo_r1)) - ((rlxp_2 - Fo_r2)/(Fm2 - Fo_r2))) + (((rlx_3 - Fo_r1)/(Fm - Fo_r1)) - ((rlxp_3 - Fo_r2)/(Fm2 - Fo_r2)))" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** dif1 -->
+  <TERM type="none">
+    <EXIST name="rlx_1"/>
+    <EXIST name="rlxp_1"/>
+    <EXIST name="Fo_r1"/>
+    <EXIST name="Fo_r2"/>
+    <FORMULA var="dif1" term="((rlx_1 - Fo_r1)/(Fm - Fo_r1)) - ((rlxp_1 - Fo_r2)/(Fm2 - Fo_r2))" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** dif2 -->
+  <TERM type="none">
+    <EXIST name="rlx_2"/>
+    <EXIST name="rlxp_2"/>
+    <EXIST name="Fo_r1"/>
+    <EXIST name="Fo_r2"/>
+    <FORMULA var="dif2" term="((rlx_2 - Fo_r1)/(Fm - Fo_r1)) - ((rlxp_2 - Fo_r2)/(Fm2 - Fo_r2))" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  **** dif3 -->
+  <TERM type="none">
+    <EXIST name="rlx_3"/>
+    <EXIST name="rlxp_3"/>
+    <EXIST name="Fo_r1"/>
+    <EXIST name="Fo_r2"/>
+    <FORMULA var="dif3" term="((rlx_3 - Fo_r1)/(Fm - Fo_r1)) - ((rlxp_3 - Fo_r2)/(Fm2 - Fo_r2))" accuracy="5" visible="true" export="true" group="4"/>
+  </TERM>
+
+<!--  ****QY_max definition = Fv/Fm -->
+  <TERM type="none">
+    <EXIST name="Fo"/>
+    <EXIST name="Fm"/>
+    <FORMULA var="QY_max" term="Fv/Fm" accuracy="3" visible="true" group="0"/>
+  </TERM>
+
+
+<!--  ****QY_max definition = Fv/Fm derived from lowest for Fo -->
+  <TERM type="none">
+    <EXIST name="Ft_D1"/>
+    <EXIST name="Fm"/>
+    <FORMULA var="QY_FtD1" term="(Fm-Ft_D1)/Fm" accuracy="3" visible="true" group="0"/>
+  </TERM>
+
+
+
+
+<!--  **** QY_max definition from Fp-->
+  <TERM type="none">
+    <EXIST name="Fo"/>
+    <EXIST name="Fp"/>
+    <NOEXIST name="Fm"/>
+    <FORMULA var="QY_max" term="Fv/Fp" accuracy="3" visible="true" group="3"/>
+  </TERM>
+
+<!--  ****= Fv/Fm_L(x) definition  -->
+  <TERM type="repeat">
+    <EXIST name="Fo_L%d"/>
+    <EXIST name="Fm_L%d"/>
+    <FORMULA var="Fv/Fm_L%d" term="(Fm_L%d - Fo_L%d)/Fm_L%d" accuracy="3" visible="true" group="3"/>
+  </TERM>
+  
+<!--  **** Fv/Fm_Lss = (Fm_Lss - Fo_Lss)/Fm_Lss -->
+  <TERM type="none">
+    <EXIST name="Fm_Lss"/>
+    <EXIST name="Fo_Lss"/>
+    <FORMULA var="Fv/Fm_Lss" term="(Fm_Lss - Fo_Lss)/Fm_Lss" accuracy="3" visible="true" group="3"/>
+  </TERM>  
+  
+<!--  **** QY_L(x) = dF_L(x) / Fm_L(x) -->
+  <TERM type="repeat">
+    <EXIST name="Fm_L%d"/>
+    <EXIST name="Ft_L%d"/>
+    <FORMULA var="QY_L%d" term="(Fm_L%d - Ft_L%d)/Fm_L%d" accuracy="3" visible="true" group="3"/>
+  </TERM>
+
+<!--  **** QY_Lss(x) = (Fm_Lss - Ft_Lss)/Fm_Lss -->
+  <TERM type="none">
+    <EXIST name="Fm_Lss"/>
+    <EXIST name="Ft_Lss"/>
+    <FORMULA var="QY_Lss" term="(Fm_Lss - Ft_Lss)/Fm_Lss" accuracy="3" visible="true" group="3"/>
+  </TERM>
+
+<!--  **** QY_D(x) = dF_D(x) / Fm_D(x) -->
+  <TERM type="repeat">
+    <EXIST name="Fm_D%d"/>
+    <EXIST name="Ft_D%d"/>
+    <FORMULA var="QY_D%d" term="(Fm_D%d - Ft_D%d)/Fm_D%d" accuracy="3" visible="true" group="3"/>
+  </TERM>
+  
+<!--  **** NPQ_L(x) = dFm_L(x) / Fm_L(x) -->
+  <TERM type="repeat">
+    <EXIST name="Fm"/>
+    <EXIST name="Fm_L%d"/>
+    <FORMULA var="NPQ_L%d" term="(Fm - Fm_L%d)/Fm_L%d" accuracy="3" visible="true" group="4"/>
+  </TERM>
+
+<!--  **** NPQ_Lss(x) = (Fm - Fm_Lss)/Fm_Lss -->
+  <TERM type="none">
+    <EXIST name="Fm"/>
+    <EXIST name="Fm_Lss"/>
+    <FORMULA var="NPQ_Lss" term="(Fm - Fm_Lss)/Fm_Lss" accuracy="3" visible="true" group="4"/>
+  </TERM>
+
+<!--  **** NPQ_D(x) = dFm_D(x) / Fm_D(x) -->
+  <TERM type="repeat">
+    <EXIST name="Fm"/>
+    <EXIST name="Fm_D%d"/>
+    <FORMULA var="NPQ_D%d" term="(Fm - Fm_D%d)/Fm_D%d" accuracy="3" visible="true" group="4"/>
+  </TERM>
+
+<!--  **** qE proportional to-->
+  <TERM type="none">
+    <EXIST name="Fm"/>
+    <EXIST name="Fm_Lss"/>
+    <EXIST name="Fm_D4"/>
+    <NOEXIST name="Fm_D7"/>
+    <EXIST name="Fm"/>
+    <FORMULA var="qE" term="(((Fm-Fm_Lss)/Fm_Lss)-((Fm-Fm_D4)/Fm_D4))" accuracy="4" visible="true" group="0"/>
+  </TERM>
+
+<!--  **** qE in long scripts -->
+  <TERM type="none">
+    <EXIST name="Fm"/>
+    <EXIST name="Fm_Lss"/>
+    <EXIST name="Fm_D7"/>
+    <EXIST name="Fm"/>
+    <FORMULA var="qE" term="(((Fm-Fm_Lss)/Fm_Lss)-((Fm-Fm_D7)/Fm_D7))" accuracy="4" visible="true" group="0"/>
+  </TERM>
+
+<!--  **** qE in the light-->
+  <TERM type="none">
+    <EXIST name="Fm_Lss"/>
+    <EXIST name="Fm_DP"/>
+    <FORMULA var="qE_inlight" term="((Fm_DP-Fm_Lss)/Fm_Lss)" accuracy="4" visible="true" group="0"/>
+  </TERM>
+
+<!--  **** qI = NPQ_D4 in short scripts-->
+  <TERM type="none">
+    <EXIST name="Fm"/>
+    <EXIST name="Fm_D4"/>
+    <NOEXIST name="Fm_D7"/>
+    <FORMULA var="qI" term="(Fm - Fm_D4)/Fm_D4" accuracy="4" visible="true" group="0"/>
+  </TERM>
+
+<!--  **** qI = NPQ_D7 in long scripts-->
+  <TERM type="none">
+    <EXIST name="Fm"/>
+    <EXIST name="Fm_D7"/>
+    <FORMULA var="qI" term="(Fm - Fm_D7)/Fm_D7" accuracy="4" visible="true" group="0"/>
+  </TERM>
+
+<!--  **** PhiII -->
+  <TERM type="none">
+    <EXIST name="Ft_Lss"/>
+    <EXIST name="Fm_Lss"/>
+    <FORMULA var="PhiII" term="((Fm_Lss - Ft_Lss)/Fm_Lss)" accuracy="4" visible="true" group="0"/>
+  </TERM>
+
+<!--  **** qL -->
+  <TERM type="none">
+    <EXIST name="Ft_Lss"/>
+    <EXIST name="Fm_Lss"/>
+    <EXIST name="FoPrime"/>
+    <FORMULA var="qL" term="((Fm_Lss - Ft_Lss)/(Fm_Lss - FoPrime))*(FoPrime/Ft_Lss)" accuracy="4" visible="true" group="0"/>
+  </TERM>
+
+<!--  **** qL Baker -->
+  <TERM type="none">
+    <EXIST name="Ft_Lss"/>
+    <EXIST name="Fm_Lss"/>
+    <EXIST name="Fopb"/>
+    <EXIST name="Fo"/>
+    <FORMULA var="qL" term="((Fm_Lss - Ft_Lss)/(Fm_Lss - Fopb))*(Fo/Ft_Lss)" accuracy="3" visible="true" group="1"/>
+  </TERM>
+
+
+<!--  **** Rfd_Ln = (Fp - Ft_Ln)/Ft_Ln -->
+  <TERM type="repeat">
+    <EXIST name="Fp"/>
+    <EXIST name="Ft_L%d"/>
+    <FORMULA var="Rfd_L%d" term="(Fp - Ft_L%d)/Ft_L%d" accuracy="3" visible="true" group="3"/>
+  </TERM>
+
+<!--  **** Rfd_Lss = (Fp-Ft_Lss)/Ft_Lss -->
+  <TERM type="none">
+    <EXIST name="Ft_Lss"/>
+    <EXIST name="Fp"/>
+    <FORMULA var="Rfd_Lss" term="(Fp - Ft_Lss)/Ft_Lss" accuracy="3" visible="true" group="3"/>
+  </TERM>
+
+
+<!--  **** tobacco ************-->
+
+<!--  ****Fo/FoPrime -->
+  <TERM type="none">
+    <EXIST name="Fo"/>
+    <EXIST name="FoPrime"/>
+    <FORMULA var="Fo_over_FoPrime" term="Fo/FoPrime" accuracy="5" visible="true" export="true" group="1"/>
+  </TERM>
+
+<!--  ****variant QYmax definition = Fm-FoPrime/Fm -->
+  <TERM type="none">
+    <EXIST name="Fm"/>
+    <EXIST name="FoPrime"/>
+    <FORMULA var="QY_FoPrime" term="(Fm-FoPrime)/Fm" accuracy="3" visible="true" group="0"/>
+  </TERM>
+
+<!--  **** PAR ************-->
+
+<!-- **** R_NIR AVERAGED -->
+ <TERM type="none">
+   <EXIST name="startR_NIR"/>
+   <EXIST name="endR_NIR"/>
+   <FORMULA var="R_NIR" term="average(frame,startR_NIR,endR_NIR)" accuracy="3" visible="true" group="7"/>
+ </TERM>
+  
+<!-- **** R_RED AVERAGED -->
+ <TERM type="none">
+   <EXIST name="startR_RED"/>
+   <EXIST name="endR_RED"/>
+   <FORMULA var="R_RED" term="average(frame,startR_RED,endR_RED)" accuracy="3" visible="true" group="7"/>
+ </TERM>
+
+<!-- **** a -->
+ <TERM type="none">
+    <EXIST name="R_NIR"/>
+    <EXIST name="R_RED"/>
+    <FORMULA var="a" term="(R_NIR - R_RED)/(R_NIR)" accuracy="3" visible="true"/>
+  </TERM>
+  
+    <TERM type="none">  
+		<EXIST name="frameABS"/>
+		<FORMULA var="a" term="frameABS"  accuracy="3" visible="true" export="true"/>
+	</TERM>	  
+	<TERM type="none">  
+		<EXIST name="LightKoefA"/>
+		<EXIST name="LightKoefB"/>
+		<EXIST name="LightIntensity"/>
+		<FORMULA var="PAR" term="LightKoefA * LightIntensity + LightKoefB"  accuracy="3" visible="true" export="true"/>
+	</TERM>	    
+	<TERM type="none">  
+		<EXIST name="a"/>
+		<EXIST name="QY_Lss"/>
+		<EXIST name="PAR"/>
+		<FORMULA var="ETR" term="a * 0.5 * QY_Lss * PAR" accuracy="3" visible="true" group="8"/>
+	</TERM>	  
+
+</NUMERIX>

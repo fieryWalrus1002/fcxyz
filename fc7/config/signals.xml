@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SIGNALS>
+  <SIGNAL name="Measuring" mask="0x10000"/>
+  <SIGNAL name="Measuring Flash" mask="0x0001"/>
+  <SIGNAL name="Actinic Light" mask="0x0002"/>
+  <SIGNAL name="Actinic Light2" mask="0x0002"/>	
+  <SIGNAL name="IR" mask="0x0004"/>	
+  <SIGNAL name="Super Light" mask="0x0008"/>
+  <SIGNAL name="Mechanical Shutter" mask="0x100"/>
+  <SIGNAL name="Substraction" mask="0x40000"/>
+  <SIGNAL name="Average" mask="0x220000"/>
+</SIGNALS>

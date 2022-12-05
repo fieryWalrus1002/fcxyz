@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TABLE>
+	<MODE resolution="1024 x 768" binning="1x1" ts="50ms">
+		<VALUE>14us</VALUE>
+		<VALUE>24us</VALUE>	
+		<VALUE>37.3us</VALUE>	
+		<VALUE>144us</VALUE>	
+		<VALUE>286.4999845us</VALUE>	
+		<VALUE>573us</VALUE>	
+		<VALUE>1.01ms</VALUE>	
+		<VALUE>2.01ms</VALUE>	
+		<VALUE>4.01ms</VALUE>	
+		<VALUE>6.31ms</VALUE>	
+		<VALUE>10.1ms</VALUE>	
+		<VALUE>16.67ms</VALUE>	
+		<VALUE>20.1ms</VALUE>		
+	</MODE>
+	<MODE resolution="1024 x 768" binning="1x1" ts="100ms">
+		<VALUE>17us</VALUE>
+		<VALUE>27us</VALUE>	
+		<VALUE>40us</VALUE>	
+		<VALUE>108us</VALUE>	
+		<VALUE>358us</VALUE>	
+		<VALUE>645us</VALUE>	
+		<VALUE>1.1ms</VALUE>	
+		<VALUE>2.1ms</VALUE>	
+		<VALUE>4.1ms</VALUE>	
+		<VALUE>6.4ms</VALUE>	
+		<VALUE>10.1ms</VALUE>	
+		<VALUE>16.67ms</VALUE>	
+		<VALUE>20.1ms</VALUE>		
+	</MODE>
+	<MODE resolution="348 x 256" binning="4x4" ts="20ms">
+		<VALUE>14us</VALUE>
+		<VALUE>24us</VALUE>	
+		<VALUE>37.3us</VALUE>	
+		<VALUE>144us</VALUE>	
+		<VALUE>285us</VALUE>	
+		<VALUE>565us</VALUE>	
+		<VALUE>1.01ms</VALUE>	
+		<VALUE>2.01ms</VALUE>	
+		<VALUE>4.01ms</VALUE>	
+		<VALUE>6.4ms</VALUE>	
+		<VALUE>10.01ms</VALUE>	
+		<VALUE>16.67ms</VALUE>	
+		<VALUE>20.01ms</VALUE>		
+	</MODE>
+	<MODE resolution="348 x 256" binning="4x4" ts="40ms">
+		<VALUE>17us</VALUE>
+		<VALUE>27us</VALUE>	
+		<VALUE>40us</VALUE>	
+		<VALUE>108us</VALUE>	
+		<VALUE>358us</VALUE>	
+		<VALUE>645us</VALUE>	
+		<VALUE>1.1ms</VALUE>	
+		<VALUE>2.1ms</VALUE>	
+		<VALUE>4.1ms</VALUE>	
+		<VALUE>6.4ms</VALUE>	
+		<VALUE>10.1ms</VALUE>	
+		<VALUE>16.67ms</VALUE>	
+		<VALUE>20.1ms</VALUE>		
+	</MODE>
+	<MODE resolution="464 x 344" binning="3x3" ts="50ms">
+		<VALUE>17us</VALUE>
+		<VALUE>27us</VALUE>	
+		<VALUE>40us</VALUE>	
+		<VALUE>108us</VALUE>	
+		<VALUE>358us</VALUE>	
+		<VALUE>645us</VALUE>	
+		<VALUE>1.1ms</VALUE>	
+		<VALUE>2.1ms</VALUE>	
+		<VALUE>4.1ms</VALUE>	
+		<VALUE>6.4ms</VALUE>	
+		<VALUE>10.1ms</VALUE>	
+		<VALUE>16.67ms</VALUE>	
+		<VALUE>20.1ms</VALUE>		
+	</MODE>
+	<MODE resolution="696 x 520" binning="2x2" ts="40ms">
+		<VALUE>14us</VALUE>
+		<VALUE>24us</VALUE>	
+		<VALUE>37.33us</VALUE>	
+		<VALUE>144us</VALUE>	
+		<VALUE>285us</VALUE>	
+		<VALUE>565us</VALUE>	
+		<VALUE>1.01ms</VALUE>	
+		<VALUE>2.01ms</VALUE>	
+		<VALUE>4.01ms</VALUE>	
+		<VALUE>6.4ms</VALUE>	
+		<VALUE>10.1ms</VALUE>	
+		<VALUE>16.67ms</VALUE>	
+		<VALUE>20.01ms</VALUE>		
+	</MODE>
+</TABLE>

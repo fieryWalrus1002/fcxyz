@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- numerix -->
+<!-- basic unit is [ms] -->
+<NUMERIX>
+  <TERM type="none">
+    <FORMULA var="tFo" term="1us" accuracy="0" visible="false"/>
+	<FORMULA var="tFm" term="30us" accuracy="0" visible="false"/>
+  </TERM>		
+  <TERM type="none">
+	<FORMULA var="Fo" term="average(frame,1us,5us)" accuracy="0" visible="true" export="true" group="0"/>  								
+    <FORMULA var="Fm" term="frame{tFm})" accuracy="0" visible="true" export="true" group="0"/>  										
+  </TERM>				
+  <TERM type="none">	
+    <FORMULA var="Fv" term="Fm - Fo" accuracy="0" visible="true" group="0"/>  										
+	<FORMULA var="Fv/Fm" term="Fv/Fm" accuracy="3" visible="true" group="1"/>  
+	<FORMULA var="Fm/Fo" term="Fm/Fo" accuracy="3" visible="true" group="2"/> 										
+    <FORMULA var="Fv/Fo" term="Fv/Fo" accuracy="3" visible="true" group="2"/>  																				
+  </TERM>
+</NUMERIX>

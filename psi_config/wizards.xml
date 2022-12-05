@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DEVICES>
+  <DEVICE id="2000">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>			
+  </DEVICE>
+  
+  <DEVICE id="2001">
+  	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>			
+  </DEVICE>
+  
+  <DEVICE id="2002">
+  	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>			
+  </DEVICE>
+  
+  <DEVICE id="2003">
+  	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>			
+  </DEVICE>  
+ 
+  <DEVICE id="2004">
+ 	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>			
+  </DEVICE>
+
+  <DEVICE id="2005">
+	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>			
+  </DEVICE>
+  
+  <DEVICE id="2006">
+ 	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+   	<WIZARD caption="QA reoxidation" file="qa-rxd-USB.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  </DEVICE>
+  
+  <DEVICE id="2007">
+  	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="GFP" file="Dyes&FPs1.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2008">
+  	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  </DEVICE>
+  
+  <DEVICE id="2009">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  </DEVICE>
+
+  <DEVICE id="2010">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2011">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  </DEVICE>
+
+  <DEVICE id="2100">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  </DEVICE>
+  
+  <DEVICE id="2101">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  </DEVICE>
+  
+  
+  <DEVICE id="2200">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2201">
+  	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2202">
+    <WIZARD caption="Fv/Fm" file="Fv_Fm-USB_LU-extra.wzd" image="Fo_Kautsky_effect.BMP"/>
+	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU-extra.wzd" image="Fo_Kautsky_effect.BMP"/>
+	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU-extra.wzd" image="Quenching_analysis.BMP"/>
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light-extra2.wzd" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1-extra.wzd" image="GFP.bmp"/>
+  </DEVICE>
+  
+   <DEVICE id="2203">
+    <WIZARD caption="Fv/Fm" file="Fv_Fm-USB_LU-extra.wzd" image="Fo_Kautsky_effect.BMP"/>
+	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU-extra.wzd" image="Fo_Kautsky_effect.BMP"/>
+	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU-extra.wzd" image="Quenching_analysis.BMP"/>
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light-extra2.wzd" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1-extra.wzd" image="GFP.bmp"/>
+  </DEVICE>
+  
+  <DEVICE id="2207">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2209">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act1UV-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act1UV-USB_LU-Mic.wzd" image="Quenching_analysis.BMP"/>			
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2300">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2301">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2302">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2303">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2304">
+  	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2305">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="QA reoxidation" file="qa-rxd-USB.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2306">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="QA reoxidation" file="qa-rxd-USB.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  </DEVICE>
+
+  <DEVICE id="2307">
+ 	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act123-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act123-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light123.WZD" image="Kautsky_in_continuous_light.BMP"/>			
+  </DEVICE>
+
+  <DEVICE id="2308">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="QA reoxidation" file="qa-rxd-USB.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  </DEVICE>
+  
+<DEVICE id="2309">
+  <WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  <WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>  
+  <WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+  <WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/> 
+</DEVICE>
+  
+  
+  <DEVICE id="2400">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2401">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2402">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light12.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2500">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2501">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2502">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2503">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="QA reoxidation" file="qa-rxd-LU.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2504">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2507">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+  	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2509">
+    	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act1UV-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act1UV-USB_LU-Mic.wzd" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Kautsky effect in continuous light" file="Kautsky_in_continuous_light.WZD" image="Kautsky_in_continuous_light.BMP"/>
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs1UV-LU-Mic.wzd" image="GFP.bmp" leftcolor="0x0000ff"/>	
+  </DEVICE>  
+  
+  <DEVICE id="2510">
+    <WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    <WIZARD caption="Quenching analysis" file="Quenching_analysis2-USB_LU.WZD" image="Quenching_analysis.BMP"/>  
+    <WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>
+  </DEVICE>
+  
+  <DEVICE id="2512">
+    <WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    <WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>                   
+  </DEVICE>
+  
+
+  
+  
+  <DEVICE id="2600">
+	<WIZARD caption="Bio-luminescence" file="Biolum.wzd" image="Biolum.bmp"/>	
+  </DEVICE>
+
+  <DEVICE id="2700">
+    <WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    <WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE> 
+  
+  <DEVICE id="2701">
+   	<WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+   	<WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>		
+	<WIZARD caption="Dyes&FPs" file="Dyes&FPs12.wzd" image="GFP.bmp"/>	
+  </DEVICE>
+  
+  <DEVICE id="2702">
+    <WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    <WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>                   
+  </DEVICE>
+  
+  <DEVICE id="2703">
+    <WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    <WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>                   
+  </DEVICE>
+  
+  <DEVICE id="2704">
+    <WIZARD caption="Fo Kautsky effect" file="Fo_Kautsky_effect-Act12-USB_LU.wzd" image="Fo_Kautsky_effect.BMP"/>
+    <WIZARD caption="Quenching analysis" file="Quenching_analysis2-Act12-USB_LU.WZD" image="Quenching_analysis.BMP"/>                   
+  </DEVICE>
+  
+  
+  
+  
+ </DEVICES>

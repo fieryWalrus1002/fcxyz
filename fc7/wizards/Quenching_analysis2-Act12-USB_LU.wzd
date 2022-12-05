@@ -1,0 +1,1297 @@
+%define_title('Quenching analysis')
+
+%define_group('Actinic Light')
+%define_var('Actinic1')
+    type(bool)
+    caption('Actinic 1 light ON')
+    init_value(true)
+%end_var
+
+%define_var('Actinic2')
+    type(bool)
+    caption('Actinic 2 light ON')
+    init_value(false)
+%end_var
+%end_group
+ 
+%define_group('Fo measurement')
+
+  %define_var('f0duration')
+    type(real)
+    init_value(5)
+    caption('Fo duration [s]')
+  %end_var
+	
+  %define_var('foeverynth')
+    type(int)
+    caption('Fo Every n-th frame');
+    init_value(2)
+    minimum(2)
+    maximum(30)
+    no_display
+    %define_trigger
+       set('foeverynth := f0duration/1')
+    %end_trigger
+  %end_var
+%end_group
+
+%define_group('Fm measurement ("dark" level)')
+  %define_var('fmduration')
+    type(real)
+    caption('Pulse duration [ms]')
+    init_value(800)
+    minimum(300)
+    maximum(1500)
+  %end_var
+  
+   %define_var('SLirradiance')
+     type(real)
+     caption('Pulse intensity [%]')
+     init_value(50)
+     minimum(1)
+     maximum(100)
+	 no_display
+  %end_var
+  
+%end_group 
+
+%define_group('Dark relaxation after "dark" level Fm measurement')
+
+  %define_var('pause')
+     type(real)
+     caption('Dark pause after Fm measurement [s]')
+     init_value(10)
+     minimum(0)
+     maximum(300)
+  %end_var
+
+  %define_var('darkeverynth')
+    type(int)
+    caption('Every n-th frame');
+    init_value(2)
+    minimum(2)
+    maximum(30)
+    no_display
+    %define_trigger
+       set('darkeverynth := pause/1')
+    %end_trigger
+  %end_var
+
+%end_group
+
+
+%define_group('Kautsky induction')
+  %define_var('alduration')
+		type(real)
+		caption('Actinic light exposure [s]')
+    init_value(60)
+    minimum(1)
+    maximum(1800)
+    %define_trigger
+		set('pulseL := 0.5 + (alduration * numberpulses)/(decay + alduration)')
+	%end_trigger	 
+	%define_trigger	
+		set('pulseD := numberpulses - pulseL')
+	%end_trigger	
+  %end_var
+	
+	%define_var('Act1')
+    type(int)
+    caption('Actinic light intensity [%]')
+    init_value(20)
+    minimum(1)
+    maximum(100)
+	no_display
+  %end_var
+	
+	%define_var('acteverynth')
+    type(int)
+		init_value(6)
+		caption('Every n-th frame')
+		minimum(1)
+		no_display
+		%define_trigger
+       set('acteverynth := alduration/3')
+    %end_trigger
+   %end_var
+	
+	%define_var('startact')
+	  type(real)  
+		caption('Start actinic light [s]')
+		no_display
+		%define_trigger
+		  set('startact := f0duration + fmduration/1000 + pause') 
+		%end_trigger
+	%end_var
+	
+%end_group
+
+%define_group('Dark relaxation after Kautsky induction')
+
+  %define_var('decay')
+    type(real)
+    caption('Relaxation interval [s]')
+    init_value(20)
+    minimum(1)
+  %end_var
+%end_group
+
+%define_group('Number of pulses during Kautsky induction and Relaxation')
+
+  %define_var('firstpulse')
+    type(real)
+    caption('First pulse after the actinic light trigger [s]')
+    init_value(9)
+    minimum(1)
+		read_only
+    %define_trigger
+      condition('(firstpulse*1000)%100 <> 0')
+      set('firstpulse := (100*round((firstpulse*1000)/100))/1000')
+    %end_trigger
+  %end_var	
+	
+	%define_var('endFp')
+    type(real)
+		caption('Position endFp in Light [s]')
+		read_only
+		no_display
+		%define_trigger
+			set('endFp := f0duration + fmduration/1000 + pause + firstpulse/2')
+		%end_trigger
+  %end_var
+	
+  %define_var('numberpulses')
+    type(int)
+    caption('Number of pulses')
+    init_value(6)
+    minimum(1)
+    maximum(10)
+		%define_trigger
+			set('pulseL := 0.5 + (alduration * numberpulses)/(decay + alduration)')
+  	%end_trigger	 
+		%define_trigger	
+			set('pulseD := numberpulses - pulseL')
+    %end_trigger
+		%define_trigger
+		  condition('pulseL > 0')
+			set('startpulse1L := f0duration + fmduration/1000 + pause + firstpulse')
+		%end_trigger	
+
+		%define_trigger
+		  condition('pulseL = 1')
+			set('lastpulseL := startpulse1L')
+		%end_trigger
+		%define_trigger
+		  condition('pulseL>1')
+			set('lastpulseL := f0duration + fmduration/1000 + pause + alduration - 2')
+		%end_trigger
+		
+		%define_trigger
+		  condition('pulseL = 2')
+			set('startpulse2L := lastpulseL')
+		%end_trigger
+		%define_trigger
+		  condition('pulseL = 3')
+			set('startpulse3L := lastpulseL')
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 4')
+			set('startpulse4L := lastpulseL')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 5')
+			set('startpulse5L := lastpulseL')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 6')
+			set('startpulse6L := lastpulseL')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 7')
+			set('startpulse7L := lastpulseL')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 8')
+			set('startpulse8L := lastpulseL')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 9')
+			set('startpulse9L := lastpulseL')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse10L := lastpulseL')			
+		%end_trigger			
+		
+		%define_trigger
+		  condition('pulseL = 3')
+			set('startpulse2L := (startpulse1L + lastpulseL)/2')
+		%end_trigger		
+
+  	%define_trigger
+		  condition('pulseL = 4')
+			set('startpulse2L := startpulse1L + (lastpulseL-startpulse1L)/3')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 4')
+			set('startpulse3L := startpulse1L + 2*(lastpulseL-startpulse1L)/3')			
+		%end_trigger		
+
+		%define_trigger
+		  condition('pulseL = 5')
+			set('startpulse2L := startpulse1L + (lastpulseL-startpulse1L)/4')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 5')
+			set('startpulse3L := startpulse1L + 2*(lastpulseL-startpulse1L)/4')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 5')
+			set('startpulse4L := startpulse1L + 3*(lastpulseL-startpulse1L)/4')			
+		%end_trigger	
+		
+		%define_trigger
+		  condition('pulseL = 6')
+			set('startpulse2L := startpulse1L + (lastpulseL-startpulse1L)/5')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 6')
+			set('startpulse3L := startpulse1L + 2*(lastpulseL-startpulse1L)/5')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 6')
+			set('startpulse4L := startpulse1L + 3*(lastpulseL-startpulse1L)/5')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 6')
+			set('startpulse5L := startpulse1L + 4*(lastpulseL-startpulse1L)/5')			
+		%end_trigger	
+		
+		%define_trigger
+		  condition('pulseL = 7')
+			set('startpulse2L := startpulse1L + (lastpulseL-startpulse1L)/6')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 7')
+			set('startpulse3L := startpulse1L + 2*(lastpulseL-startpulse1L)/6')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 7')
+			set('startpulse4L := startpulse1L + 3*(lastpulseL-startpulse1L)/6')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 7')
+			set('startpulse5L := startpulse1L + 4*(lastpulseL-startpulse1L)/6')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 7')
+			set('startpulse6L := startpulse1L + 5*(lastpulseL-startpulse1L)/6')			
+		%end_trigger			
+		
+		%define_trigger
+		  condition('pulseL = 8')
+			set('startpulse2L := startpulse1L + (lastpulseL-startpulse1L)/7')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 8')
+			set('startpulse3L := startpulse1L + 2*(lastpulseL-startpulse1L)/7')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 8')
+			set('startpulse4L := startpulse1L + 3*(lastpulseL-startpulse1L)/7')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 8')
+			set('startpulse5L := startpulse1L + 4*(lastpulseL-startpulse1L)/7')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 8')
+			set('startpulse6L := startpulse1L + 5*(lastpulseL-startpulse1L)/7')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseL = 8')
+			set('startpulse7L := startpulse1L + 6*(lastpulseL-startpulse1L)/7')			
+		%end_trigger	
+		
+		%define_trigger
+		  condition('pulseL = 9')
+			set('startpulse2L := startpulse1L + (lastpulseL-startpulse1L)/8')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 9')
+			set('startpulse3L := startpulse1L + 2*(lastpulseL-startpulse1L)/8')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 9')
+			set('startpulse4L := startpulse1L + 3*(lastpulseL-startpulse1L)/8')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 9')
+			set('startpulse5L := startpulse1L + 4*(lastpulseL-startpulse1L)/8')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 9')
+			set('startpulse6L := startpulse1L + 5*(lastpulseL-startpulse1L)/8')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseL = 9')
+			set('startpulse7L := startpulse1L + 6*(lastpulseL-startpulse1L)/8')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseL = 9')
+			set('startpulse8L := startpulse1L + 7*(lastpulseL-startpulse1L)/8')			
+		%end_trigger			
+		
+		%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse2L := startpulse1L + (lastpulseL-startpulse1L)/9')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse3L := startpulse1L + 2*(lastpulseL-startpulse1L)/9')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse4L := startpulse1L + 3*(lastpulseL-startpulse1L)/9')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse5L := startpulse1L + 4*(lastpulseL-startpulse1L)/9')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse6L := startpulse1L + 5*(lastpulseL-startpulse1L)/9')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse7L := startpulse1L + 6*(lastpulseL-startpulse1L)/9')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse8L := startpulse1L + 7*(lastpulseL-startpulse1L)/9')			
+		%end_trigger			
+		%define_trigger
+		  condition('pulseL = 10')
+			set('startpulse9L := startpulse1L + 8*(lastpulseL-startpulse1L)/9')			
+		%end_trigger		
+
+		%define_trigger
+		  condition('pulseD > 0')
+			set('startpulse1D := startact + alduration + firstpulse')
+		%end_trigger	
+
+		%define_trigger
+		  condition('pulseD = 1')
+			set('lastpulseD := startpulse1D')
+		%end_trigger
+		%define_trigger
+		  condition('pulseD>1')
+			set('lastpulseD := startact + alduration + decay - 2')
+		%end_trigger
+		
+		%define_trigger
+		  condition('pulseD = 2')
+			set('startpulse2D := lastpulseD')
+		%end_trigger
+		%define_trigger
+		  condition('pulseD = 3')
+			set('startpulse3D := lastpulseD')
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 4')
+			set('startpulse4D := lastpulseD')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 5')
+			set('startpulse5D := lastpulseD')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 6')
+			set('startpulse6D := lastpulseD')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 7')
+			set('startpulse7D := lastpulseD')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 8')
+			set('startpulse8D := lastpulseD')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 9')
+			set('startpulse9D := lastpulseD')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse10D := lastpulseD')			
+		%end_trigger		
+
+	%define_trigger
+		  condition('pulseD = 3')
+			set('startpulse2D := (startpulse1D + lastpulseD)/2')
+		%end_trigger		
+
+  	%define_trigger
+		  condition('pulseD = 4')
+			set('startpulse2D := startpulse1D + (lastpulseD-startpulse1D)/3')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 4')
+			set('startpulse3D := startpulse1D + 2*(lastpulseD-startpulse1D)/3')			
+		%end_trigger		
+
+		%define_trigger
+		  condition('pulseD = 5')
+			set('startpulse2D := startpulse1D + (lastpulseD-startpulse1D)/4')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 5')
+			set('startpulse3D := startpulse1D + 2*(lastpulseD-startpulse1D)/4')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 5')
+			set('startpulse4D := startpulse1D + 3*(lastpulseD-startpulse1D)/4')			
+		%end_trigger	
+		
+		%define_trigger
+		  condition('pulseD = 6')
+			set('startpulse2D := startpulse1D + (lastpulseD-startpulse1D)/5')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 6')
+			set('startpulse3D := startpulse1D + 2*(lastpulseD-startpulse1D)/5')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 6')
+			set('startpulse4D := startpulse1D + 3*(lastpulseD-startpulse1D)/5')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 6')
+			set('startpulse5D := startpulse1D + 4*(lastpulseD-startpulse1D)/5')			
+		%end_trigger	
+		
+		%define_trigger
+		  condition('pulseD = 7')
+			set('startpulse2D := startpulse1D + (lastpulseD-startpulse1D)/6')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 7')
+			set('startpulse3D := startpulse1D + 2*(lastpulseD-startpulse1D)/6')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 7')
+			set('startpulse4D := startpulse1D + 3*(lastpulseD-startpulse1D)/6')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 7')
+			set('startpulse5D := startpulse1D + 4*(lastpulseD-startpulse1D)/6')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 7')
+			set('startpulse6D := startpulse1D + 5*(lastpulseD-startpulse1D)/6')			
+		%end_trigger			
+		
+		%define_trigger
+		  condition('pulseD = 8')
+			set('startpulse2D := startpulse1D + (lastpulseD-startpulse1D)/7')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 8')
+			set('startpulse3D := startpulse1D + 2*(lastpulseD-startpulse1D)/7')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 8')
+			set('startpulse4D := startpulse1D + 3*(lastpulseD-startpulse1D)/7')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 8')
+			set('startpulse5D := startpulse1D + 4*(lastpulseD-startpulse1D)/7')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 8')
+			set('startpulse6D := startpulse1D + 5*(lastpulseD-startpulse1D)/7')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseD = 8')
+			set('startpulse7D := startpulse1D + 6*(lastpulseD-startpulse1D)/7')			
+		%end_trigger	
+		
+		%define_trigger
+		  condition('pulseD = 9')
+			set('startpulse2D := startpulse1D + (lastpulseD-startpulse1D)/8')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 9')
+			set('startpulse3D := startpulse1D + 2*(lastpulseD-startpulse1D)/8')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 9')
+			set('startpulse4D := startpulse1D + 3*(lastpulseD-startpulse1D)/8')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 9')
+			set('startpulse5D := startpulse1D + 4*(lastpulseD-startpulse1D)/8')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 9')
+			set('startpulse6D := startpulse1D + 5*(lastpulseD-startpulse1D)/8')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseD = 9')
+			set('startpulse7D := startpulse1D + 6*(lastpulseD-startpulse1D)/8')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseD = 9')
+			set('startpulse8D := startpulse1D + 7*(lastpulseD-startpulse1D)/8')			
+		%end_trigger			
+		
+		%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse2D := startpulse1D + (lastpulseD-startpulse1D)/9')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse3D := startpulse1D + 2*(lastpulseD-startpulse1D)/9')			
+		%end_trigger		
+  	%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse4D := startpulse1D + 3*(lastpulseD-startpulse1D)/9')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse5D := startpulse1D + 4*(lastpulseD-startpulse1D)/9')			
+		%end_trigger	
+  	%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse6D := startpulse1D + 5*(lastpulseD-startpulse1D)/9')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse7D := startpulse1D + 6*(lastpulseD-startpulse1D)/9')			
+		%end_trigger	
+		%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse8D := startpulse1D + 7*(lastpulseD-startpulse1D)/9')			
+		%end_trigger			
+		%define_trigger
+		  condition('pulseD = 10')
+			set('startpulse9D := startpulse1D + 8*(lastpulseD-startpulse1D)/9')			
+		%end_trigger				
+
+	  %define_trigger
+      condition('(startpulse1L*1000)%100 <> 0')
+      set('startpulse1L := (100*round((startpulse1L*1000)/100))/1000')
+    %end_trigger	
+	  %define_trigger
+      condition('(startpulse2L*1000)%100 <> 0')
+      set('startpulse2L := (100*round((startpulse2L*1000)/100))/1000')
+    %end_trigger
+	  %define_trigger
+      condition('(startpulse3L*1000)%100 <> 0')
+      set('startpulse3L := (100*round((startpulse3L*1000)/100))/1000')
+    %end_trigger		
+	  %define_trigger
+      condition('(startpulse4L*1000)%100 <> 0')
+      set('startpulse4L := (100*round((startpulse4L*1000)/100))/1000')
+    %end_trigger	
+	  %define_trigger
+      condition('(startpulse5L*1000)%100 <> 0')
+      set('startpulse5L := (100*round((startpulse5L*1000)/100))/1000')
+    %end_trigger	
+	  %define_trigger
+      condition('(startpulse6L*1000)%100 <> 0')
+      set('startpulse6L := (100*round((startpulse6L*1000)/100))/1000')
+    %end_trigger
+	  %define_trigger
+      condition('(startpulse7L*1000)%100 <> 0')
+      set('startpulse7L := (100*round((startpulse7L*1000)/100))/1000')
+    %end_trigger		
+	  %define_trigger
+      condition('(startpulse8L*1000)%100 <> 0')
+      set('startpulse8L := (100*round((startpulse8L*1000)/100))/1000')
+    %end_trigger		
+	  %define_trigger
+      condition('(startpulse9L*1000)%40 <> 0')
+      set('startpulse9L := (100*round((startpulse9L*1000)/100))/1000')
+    %end_trigger			
+	  %define_trigger
+      condition('(startpulse10L*1000)%100 <> 0')
+      set('startpulse10L := (100*round((startpulse10L*1000)/100))/1000')
+    %end_trigger		
+
+  %define_trigger
+      condition('(startpulse1D*1000)%100 <> 0')
+      set('startpulse1D := (100*round((startpulse1D*1000)/100))/1000')
+    %end_trigger	
+	  %define_trigger
+      condition('(startpulse2D*1000)%100 <> 0')
+      set('startpulse2D := (100*round((startpulse2D*1000)/100))/1000')
+    %end_trigger
+	  %define_trigger
+      condition('(startpulse3D*1000)%100 <> 0')
+      set('startpulse3D := (100*round((startpulse3D*1000)/100))/1000')
+    %end_trigger		
+	  %define_trigger
+      condition('(startpulse4D*1000)%100 <> 0')
+      set('startpulse4D := (100*round((startpulse4D*1000)/100))/1000')
+    %end_trigger	
+	  %define_trigger
+      condition('(startpulse5D*1000)%40 <> 0')
+      set('startpulse5D := (40*round((startpulse5D*1000)/40))/1000')
+    %end_trigger	
+	  %define_trigger
+      condition('(startpulse6D*1000)%100 <> 0')
+      set('startpulse6D := (100*round((startpulse6D*1000)/100))/1000')
+    %end_trigger
+	  %define_trigger
+      condition('(startpulse7D*1000)%100 <> 0')
+      set('startpulse7D := (100*round((startpulse7D*1000)/100))/1000')
+    %end_trigger		
+	  %define_trigger
+      condition('(startpulse8D*1000)%100 <> 0')
+      set('startpulse8D := (100*round((startpulse8D*1000)/100))/1000')
+    %end_trigger		
+	  %define_trigger
+      condition('(startpulse9D*1000)%100 <> 0')
+      set('startpulse9D := (100*round((startpulse9D*1000)/100))/1000')
+    %end_trigger			
+	  %define_trigger
+      condition('(startpulse10D*1000)%100 <> 0')
+      set('startpulse10D := (100*round((startpulse10D*1000)/100))/1000')
+    %end_trigger				
+  %end_var
+
+  %define_var('pulseL')
+    type(int)
+		caption('Pulses during Kautsky')
+		read_only
+  %end_var
+
+   %define_var('pulseD')
+    type(int)
+		caption('Pulses during Relaxation')
+		read_only
+	%end_var		
+	
+	%define_var('startpulse1L')
+    type(real)
+		caption('Position pulse 1 in Light [s]')
+		read_only
+		no_display		
+  %end_var
+	
+	%define_var('lastpulseL')
+    type(real)
+		caption('Last position pulse in Light [s]')
+		read_only
+		no_display		
+  %end_var	
+	
+  %define_var('startpulse2L')
+    type(real)
+		caption('Position pulse 2 in Light [s]')
+		read_only
+		no_display		
+	%end_var
+	
+	%define_var('startpulse3L')
+    type(real)
+		caption('Position pulse 3 in Light [s]')
+		read_only
+		no_display		
+	%end_var
+	
+	%define_var('startpulse4L')
+    type(real)
+		caption('Position pulse 4 in Light [s]')
+		read_only
+		no_display		
+  %end_var
+	
+	%define_var('startpulse5L')
+    type(real)
+		caption('Position pulse 5 in Light [s]')
+		read_only
+		no_display		
+  %end_var
+
+	%define_var('startpulse6L')
+    type(real)
+		caption('Position pulse 6 in Light [s]')
+		read_only
+		no_display		
+  %end_var
+
+	%define_var('startpulse7L')
+    type(real)
+		caption('Position pulse 7 in Light [s]')
+		read_only
+		no_display		
+  %end_var
+
+	%define_var('startpulse8L')
+    type(real)
+		caption('Position pulse 8 in Light [s]')
+		read_only
+		no_display		
+  %end_var
+
+	%define_var('startpulse9L')
+    type(real)
+		caption('Position pulse 9 in Light [s]')
+		read_only
+		no_display		
+  %end_var	
+	
+	%define_var('startpulse10L')
+    type(real)
+		caption('Position pulse 10 in Light [s]')
+		read_only
+		no_display		
+  %end_var		
+
+	%define_var('startpulse1D')
+    type(real)
+		caption('Position pulse 1 in Dark [s]')
+		read_only
+		no_display		
+  %end_var
+	
+	%define_var('lastpulseD')
+    type(real)
+		caption('Last position pulse in Dark [s]')
+		read_only
+		no_display		
+  %end_var	
+	
+  %define_var('startpulse2D')
+    type(real)
+		caption('Position pulse 2 in Dark [s]')
+		read_only
+		no_display		
+	%end_var
+	
+	%define_var('startpulse3D')
+    type(real)
+		caption('Position pulse 3 in Dark [s]')
+		read_only
+		no_display		
+	%end_var
+	
+	%define_var('startpulse4D')
+    type(real)
+		caption('Position pulse 4 in Dark [s]')
+		read_only
+		no_display		
+  %end_var
+	
+	%define_var('startpulse5D')
+    type(real)
+		caption('Position pulse 5 in Dark [s]')
+		read_only
+		no_display		
+  %end_var
+
+	%define_var('startpulse6D')
+    type(real)
+		caption('Position pulse 6 in Dark [s]')
+		read_only
+		no_display		
+  %end_var
+
+	%define_var('startpulse7D')
+    type(real)
+		caption('Position pulse 7 in Dark [s]')
+		read_only
+		no_display		
+  %end_var
+
+	%define_var('startpulse8D')
+    type(real)
+		caption('Position pulse 8 in Dark [s]')
+		read_only
+		no_display		
+  %end_var
+
+	%define_var('startpulse9D')
+    type(real)
+		caption('Position pulse 9 in Dark [s]')
+		read_only
+		no_display		
+  %end_var	
+	
+	%define_var('startpulse10D')
+    type(real)
+		caption('Position pulse 10 in Dark [s]')
+		read_only
+		no_display		
+  %end_var			
+
+%end_group
+
+;protocol body - generated by wizard
+;version ZB February 11, 2010
+
+include default.inc  ;Includes standard options, do not remove it !
+include light.inc    ;Includes standard options, do not remove it !
+
+Shutter=0
+Sensitivity=50
+Act1=%Act1%
+Super=%SLirradiance%
+;
+;------------------------------------------------------------------------------------------------------------
+;************************************************************************************************************
+Action SATPULSE begin
+  <-mfmsub_length>=>mfmsub ;before pulse
+  <0s>=>SatPulse(%fmduration%ms)
+  <TS,TS + 2 * mfmsub_length .. %fmduration%ms/2 - mfmsub_length>=>mfmsub
+  <%fmduration%ms/2,%fmduration%ms/2 + mfmsub_length .. %fmduration%ms>=>mfmsub
+  <%fmduration%ms + mfmsub_length>=>mfmsub
+end
+;
+Action MEASURE(end_time) begin
+  <%fmduration%ms + 2*mfmsub_length,%fmduration%ms + 2*mfmsub_length + %acteverynth% * mfmsub_length ..end_time - mfmsub_length>=>mfmsub
+end
+;-------------------------------------------------------------------------------------------------------------
+;*** Fo Measurement ******************************************************************************************
+;-------------------------------------------------------------------------------------------------------------
+F0duration=%f0duration%s
+F0period = mfmsub_length * %foeverynth%
+;
+<0, F0period  .. F0duration>=>mfmsub
+<F0period>=>checkPoint,"startFo"
+<F0duration - F0period>=>checkPoint,"endFo"
+;
+;-------------------------------------------------------------------------------------------------------------
+;*** Saturating Pulse & Fm Measurement ***********************************************************************
+;-------------------------------------------------------------------------------------------------------------
+PulseDuration = %fmduration%ms;      ##
+PulseStart = F0duration + 2*mfmsub_length;      ##
+;
+<PulseStart>=>SATPULSE
+
+%if('Actinic1 = 1')
+<PulseStart>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<PulseStart>=>act2(PulseDuration)
+%endif
+;
+<PulseStart + PulseDuration/2>=>checkPoint,"startFm"
+<PulseStart + PulseDuration - mfmsub_length>=>checkPoint,"endFm"
+;
+;Visual frame definition                                                  Image shown in pre-processing window
+<PulseStart + PulseDuration - 3*mfmsub_length>=>checkPoint,"timeVisual"
+;
+;-------------------------------------------------------------------------------------------------------------
+;******* Dark Relaxation Measurement *************************************************************************
+;-------------------------------------------------------------------------------------------------------------
+DarkRelaxation1 = %pause%s;         ##
+DarkStart= PulseStart + PulseDuration + 2*mfmsub_length; ##
+;
+<DarkStart, DarkStart + mfmsub_length *%darkeverynth%..DarkStart + DarkRelaxation1 - 2*mfmsub_length>=>mfmsub
+;
+;-------------------------------------------------------------------------------------------------------------
+;******* Kautsky Effect Measurement **************************************************************************
+;-------------------------------------------------------------------------------------------------------------
+;
+;******* Actinic light Exposure **************************************
+ALPeriod = %alduration%s + TS;            ##
+ALStart = %startact%s;					##
+EndFp = %endFp%s
+;
+%if('Actinic1 = 1')
+<ALStart - TS>=>act1(ALPeriod)
+%endif
+
+%if('Actinic2 = 1')
+<ALStart - TS>=>act2(ALPeriod)
+%endif
+;
+;*******Fast Kautsky kinetics*****************************************
+<ALStart - 2*mfmsub_length>=>mfmsub
+<ALStart, ALStart + mfmsub_length .. EndFp - 2*mfmsub_length>=>mfmsub
+;
+;Fp definition
+<ALStart>=>checkPoint,"startFp"
+<EndFp>=>checkPoint,"endFp"
+;
+;*******Slow Kautsky kinetics*********************************************
+;
+%if('pulseL>0')
+; measure to pulse 1
+<EndFp,EndFp + %acteverynth% * mfmsub_length..%startpulse1L%s - 2*mfmsub_length>=>mfmsub
+; measure from last pulse
+<%lastpulseL% + PulseDuration + 2*mfmsub_length,%lastpulseL%s + PulseDuration + 2*mfmsub_length + %acteverynth% * mfmsub_length .. ALStart + ALPeriod - mfmsub_length>=>mfmsub
+%else
+; measure without pulses
+<EndFp,EndFp + %acteverynth% * mfmsub_length .. ALStart + ALPeriod - mfmsub_length>=>mfmsub
+%endif
+<ALStart + ALPeriod - mfmsub_length>=>mfmsub
+;
+;-------------------------------------------------------------------------------------------------------------
+;******* Saturating Pulses - Fm' Quenching Analysis **********************************************************
+;-------------------------------------------------------------------------------------------------------------
+;
+;******* Saturating Pulses in Light- Fm_L'********************************************************************
+;
+%if('pulseL>0')
+;pulse 1
+<%startpulse1L%s>=>SATPULSE
+<%startpulse1L%s - mfmsub_length>=>checkPoint,"startFt_L1"
+<%startpulse1L%s + PulseDuration/2>=>checkPoint,"startFm_L1"
+<%startpulse1L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L1"
+%endif
+;
+%if('pulseL>1')
+;1 to 2 pulses
+<%startpulse1L%s>=>MEASURE(%startpulse2L% - %startpulse1L%s)
+;2 pulses
+<%startpulse2L%s>=>SATPULSE
+%if('pulseL=2')
+<%startpulse2L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse2L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse2L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%else
+<%startpulse2L%s - mfmsub_length>=>checkPoint,"startFt_L2"
+<%startpulse2L%s + PulseDuration/2>=>checkPoint,"startFm_L2"
+<%startpulse2L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L2"
+%endif
+%endif
+;
+%if('pulseL>2')
+;2 to 3 pulses
+<%startpulse2L%s>=>MEASURE(%startpulse3L% - %startpulse2L%)
+;3
+<%startpulse3L%s>=>SATPULSE
+%if('pulseL=3')
+<%startpulse3L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse3L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse3L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%else
+<%startpulse3L%s - mfmsub_length>=>checkPoint,"startFt_L3"
+<%startpulse3L%s + PulseDuration/2>=>checkPoint,"startFm_L3"
+<%startpulse3L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L3"
+%endif
+%endif
+;
+%if('pulseL>3')
+;from 3 to 4
+<%startpulse3L%s>=>MEASURE(%startpulse4L% - %startpulse3L%)
+;4
+<%startpulse4L%s>=>SATPULSE
+%if('pulseL=4')
+<%startpulse4L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse4L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse4L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%else
+<%startpulse4L%s - mfmsub_length>=>checkPoint,"startFt_L4"
+<%startpulse4L%s + PulseDuration/2>=>checkPoint,"startFm_L4"
+<%startpulse4L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L4"
+%endif
+%endif
+;
+%if('pulseL>4')
+;from 4 to 5
+<%startpulse4L%s>=>MEASURE(%startpulse5L% - %startpulse4L%)
+;5
+<%startpulse5L%s>=>SATPULSE
+%if('pulseL=5')
+<%startpulse5L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse5L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse5L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%else
+<%startpulse5L%s - mfmsub_length>=>checkPoint,"startFt_L5"
+<%startpulse5L%s + PulseDuration/2>=>checkPoint,"startFm_L5"
+<%startpulse5L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L5"
+%endif
+%endif
+;
+%if('pulseL>5')
+;from 5 to 6
+<%startpulse5L%s>=>MEASURE(%startpulse6L% - %startpulse5L%)
+;6
+<%startpulse6L%s>=>SATPULSE
+%if('pulseL=6')
+<%startpulse6L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse6L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse6L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%else
+<%startpulse6L%s - mfmsub_length>=>checkPoint,"startFt_L6"
+<%startpulse6L%s + PulseDuration/2>=>checkPoint,"startFm_L6"
+<%startpulse6L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L6"
+%endif
+%endif
+;
+%if('pulseL>6')
+;from 6 to 7
+<%startpulse6L%s>=>MEASURE(%startpulse7L% - %startpulse6L%)
+;7
+<%startpulse7L%s>=>SATPULSE
+%if('pulseL=7')
+<%startpulse7L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse7L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse7L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%else
+<%startpulse7L%s - mfmsub_length>=>checkPoint,"startFt_L7"
+<%startpulse7L%s + PulseDuration/2>=>checkPoint,"startFm_L7"
+<%startpulse7L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L7"
+%endif
+%endif
+;
+%if('pulseL>7')
+;from 7 to 8
+<%startpulse7L%s>=>MEASURE(%startpulse8L% - %startpulse7L%)
+;8
+<%startpulse8L%s>=>SATPULSE
+%if('pulseL=8')
+<%startpulse8L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse8L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse8L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%else
+<%startpulse8L%s - mfmsub_length>=>checkPoint,"startFt_L8"
+<%startpulse8L%s + PulseDuration/2>=>checkPoint,"startFm_L8"
+<%startpulse8L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L8"
+%endif
+%endif
+;
+%if('pulseL>8')
+;from 8 to 9
+<%startpulse8L%s>=>MEASURE(%startpulse9L% - %startpulse8L%)
+;9
+<%startpulse9L%s>=>SATPULSE
+%if('pulseL=9')
+<%startpulse9L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse9L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse9L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%else
+<%startpulse9L%s - mfmsub_length>=>checkPoint,"startFt_L9"
+<%startpulse9L%s + PulseDuration/2>=>checkPoint,"startFm_L9"
+<%startpulse9L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_L9"
+%endif
+%endif
+;
+%if('pulseL>9')
+;from 9 to 10
+<%startpulse9L%s>=>MEASURE(%startpulse10L% - %startpulse9L%)
+;10
+<%startpulse10L%s>=>SATPULSE
+<%startpulse10L%s - mfmsub_length>=>checkPoint,"startFt_Lss"
+<%startpulse10L%s + PulseDuration/2>=>checkPoint,"startFm_Lss"
+<%startpulse10L%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_Lss"
+%endif
+;
+;-------------------------------------------------------------------------------------------------------------
+;******* Dark relaxation after actinic light period **********************************************************
+;-------------------------------------------------------------------------------------------------------------
+DarkRelaxation2 = %decay%s
+;
+%if('pulseD>0')
+; measure to pulse 1
+<ALStart + ALPeriod, ALStart + ALPeriod + %acteverynth% * mfmsub_length..%startpulse1D%s - 2*mfmsub_length>=>mfmsub
+; measure from last pulse
+<%lastpulseD% + PulseDuration + 2*mfmsub_length, %lastpulseD%s + PulseDuration + 2*mfmsub_length + %acteverynth% * mfmsub_length..ALStart + ALPeriod + DarkRelaxation2 - mfmsub_length>=>mfmsub
+%else
+; measure without pulses
+<ALStart + ALPeriod, ALStart + ALPeriod + %acteverynth% * mfmsub_length .. ALStart + ALPeriod + DarkRelaxation2 - mfmsub_length>=>mfmsub
+%endif
+;<ALStart + ALPeriod + DarkRelaxation2>=>mfmsub
+;
+;******* Saturating Pulses in Dark- Fm_D'********************************************************************
+;
+%if('pulseD>0')
+;pulse 1
+<%startpulse1D%s>=>SATPULSE
+
+%if('Actinic1 = 1')
+<%startpulse1D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse1D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse1D%s - mfmsub_length>=>checkPoint,"startFt_D1"
+<%startpulse1D%s + PulseDuration/2>=>checkPoint,"startFm_D1"
+<%startpulse1D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D1"
+%endif
+
+
+%if('pulseD>1')
+;from 1 to 2
+<%startpulse1D%s>=>MEASURE(%startpulse2D% - %startpulse1D%s)
+;2
+<%startpulse2D%s>=>SATPULSE
+
+%if('Actinic1 = 1')
+<%startpulse2D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse2D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse2D%s - mfmsub_length>=>checkPoint,"startFt_D2"
+<%startpulse2D%s + PulseDuration/2>=>checkPoint,"startFm_D2"
+<%startpulse2D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D2"
+%endif
+
+
+%if('pulseD>2')
+;from 2 to 3
+<%startpulse2D%s>=>MEASURE(%startpulse3D% - %startpulse2D%s)
+;3
+<%startpulse3D%s>=>SATPULSE
+
+%if('Actinic1 = 1')
+<%startpulse3D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse3D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse3D%s - mfmsub_length>=>checkPoint,"startFt_D3"
+<%startpulse3D%s + PulseDuration/2>=>checkPoint,"startFm_D3"
+<%startpulse3D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D3"
+%endif
+
+%if('pulseD>3')
+;from 3 to 4
+<%startpulse3D%s>=>MEASURE(%startpulse4D% - %startpulse3D%s)
+;4
+<%startpulse4D%s>=>SATPULSE
+
+%if('Actinic1 = 1')
+<%startpulse4D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse4D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse4D%s - mfmsub_length>=>checkPoint,"startFt_D4"
+<%startpulse4D%s + PulseDuration/2>=>checkPoint,"startFm_D4"
+<%startpulse4D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D4"
+%endif
+
+
+%if('pulseD>4')
+;from 4 to 5
+<%startpulse4D%s>=>MEASURE(%startpulse5D% - %startpulse4D%s)
+;5
+<%startpulse5D%s>=>SATPULSE
+
+%if('Actinic1 = 1')
+<%startpulse5D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse5D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse5D%s - mfmsub_length>=>checkPoint,"startFt_D5"
+<%startpulse5D%s + PulseDuration/2>=>checkPoint,"startFm_D5"
+<%startpulse5D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D5"
+%endif
+
+
+%if('pulseD>5')
+;from 5 to 6
+<%startpulse5D%s>=>MEASURE(%startpulse6D% - %startpulse5D%s)
+;6
+<%startpulse6D%s>=>SATPULSE
+%if('Actinic1 = 1')
+<%startpulse6D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse6D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse6D%s - mfmsub_length>=>checkPoint,"startFt_D6"
+<%startpulse6D%s + PulseDuration/2>=>checkPoint,"startFm_D6"
+<%startpulse6D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D6"
+%endif
+
+
+%if('pulseD>6')
+;from 6 to 7
+<%startpulse6D%s>=>MEASURE(%startpulse7D% - %startpulse6D%s)
+;7
+<%startpulse7D%s>=>SATPULSE
+%if('Actinic1 = 1')
+<%startpulse7D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse7D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse7D%s - mfmsub_length>=>checkPoint,"startFt_D7"
+<%startpulse7D%s + PulseDuration/2>=>checkPoint,"startFm_D7"
+<%startpulse7D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D7"
+%endif
+
+
+%if('pulseD>7')
+;from 7 to 8
+<%startpulse7D%s>=>MEASURE(%startpulse8D% - %startpulse7D%s)
+;8
+<%startpulse8D%s>=>SATPULSE
+
+%if('Actinic1 = 1')
+<%startpulse8D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse8D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse8D%s - mfmsub_length>=>checkPoint,"startFt_D8"
+<%startpulse8D%s + PulseDuration/2>=>checkPoint,"startFm_D8"
+<%startpulse8D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D8"
+%endif
+
+
+%if('pulseD>8')
+;from 8 to 9
+<%startpulse8D%s>=>MEASURE(%startpulse9D% - %startpulse8D%s)
+;9
+<%startpulse9D%s>=>SATPULSE
+
+%if('Actinic1 = 1')
+<%startpulse9D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse9D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse9D%s - mfmsub_length>=>checkPoint,"startFt_D9"
+<%startpulse9D%s + PulseDuration/2>=>checkPoint,"startFm_D9"
+<%startpulse9D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D9"
+%endif
+
+
+%if('pulseD>9')
+;from 9 to 10
+<%startpulse9D%s>=>MEASURE(%startpulse10D% - %startpulse9D%s)
+;10
+<%startpulse10D%s>=>SATPULSE
+
+%if('Actinic1 = 1')
+<%startpulse10D%s>=>act1(PulseDuration)
+%endif
+
+%if('Actinic2 = 1')
+<%startpulse10D%s>=>act2(PulseDuration)
+%endif
+
+<%startpulse10D%s - mfmsub_length>=>checkPoint,"startFt_D10"
+<%startpulse10D%s + PulseDuration/2>=>checkPoint,"startFm_D10"
+<%startpulse10D%s + PulseDuration - mfmsub_length>=>checkPoint,"endFm_D10"
+%endif
+

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Mask Data -->
+<MASKS>
+  <MASK name="no mask"/>
+  <MASK name="20-Well" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>  
+    <CIRCLE x="-135"  y="-100" r="25" name="A1"/>		    
+    <CIRCLE x="-67.5"  y="-100" r="25" name="A2"/>		    
+    <CIRCLE x="0"  y="-100" r="25" name="A3"/>		    
+    <CIRCLE x="67.5"  y="-100" r="25" name="A4"/>		            
+    <CIRCLE x="135"  y="-100" r="25" name="A5"/>		                
+    
+    <CIRCLE x="-135"  y="-33" r="25" name="B1"/>		    
+    <CIRCLE x="-67.5"  y="-33" r="25" name="B2"/>		    
+    <CIRCLE x="0"  y="-33" r="25" name="B3"/>		    
+    <CIRCLE x="67.5"  y="-33" r="25" name="B4"/>		            
+    <CIRCLE x="135"  y="-33" r="25" name="B5"/>	
+    
+    <CIRCLE x="-135"  y="33" r="25" name="C1"/>		    
+    <CIRCLE x="-67.5"  y="33" r="25" name="C2"/>		    
+    <CIRCLE x="0"  y="33" r="25" name="C3"/>		    
+    <CIRCLE x="67.5"  y="33" r="25" name="C4"/>		            
+    <CIRCLE x="135"  y="33" r="25" name="C5"/>	
+
+    <CIRCLE x="-135"  y="100" r="25" name="D1"/>		    
+    <CIRCLE x="-67.5"  y="100" r="25" name="D2"/>		    
+    <CIRCLE x="0"  y="100" r="25" name="D3"/>		    
+    <CIRCLE x="67.5"  y="100" r="25" name="D4"/>		            
+    <CIRCLE x="135"  y="100" r="25" name="D5"/>	
+    
+    
+  </MASK>
+  
+<MASK name="24-Well Whatman" unit="mm">
+	<ORIGIN center="true" x="256" y="256"/>
+    <CIRCLE x="-45.4"  y="-27.36" r="7.5" name="A1"/>		
+    <CIRCLE x="-27.24" y="-27.36" r="7.5" name="A2"/>		
+    <CIRCLE x="-9.08"  y="-27.36" r="7.5" name="A3"/>		
+    <CIRCLE x="9.08"   y="-27.36" r="7.5" name="A4"/>		
+    <CIRCLE x="27.24"  y="-27.36" r="7.5" name="A5"/>		
+    <CIRCLE x="45.4"   y="-27.36" r="7.5" name="A6"/>	
+	
+    <CIRCLE x="-45.4"  y="-9.12" r="7.5" name="B1"/>		
+    <CIRCLE x="-27.24" y="-9.12" r="7.5" name="B2"/>		
+    <CIRCLE x="-9.08"  y="-9.12" r="7.5" name="B3"/>		
+    <CIRCLE x="9.08"   y="-9.12" r="7.5" name="B4"/>		
+    <CIRCLE x="27.24"  y="-9.12" r="7.5" name="B5"/>		
+    <CIRCLE x="45.4"   y="-9.12" r="7.5" name="B6"/>	
+	
+    <CIRCLE x="-45.4"  y="9.12" r="7.5" name="C1"/>		
+    <CIRCLE x="-27.24" y="9.12" r="7.5" name="C2"/>		
+    <CIRCLE x="-9.08"  y="9.12" r="7.5" name="C3"/>		
+    <CIRCLE x="9.08"   y="9.12" r="7.5" name="C4"/>		
+    <CIRCLE x="27.24"  y="9.12" r="7.5" name="C5"/>		
+    <CIRCLE x="45.4"   y="9.12" r="7.5" name="C6"/>	
+	
+    <CIRCLE x="-45.4"  y="27.36" r="7.5" name="D1"/>		
+    <CIRCLE x="-27.24" y="27.36" r="7.5" name="D2"/>		
+    <CIRCLE x="-9.08"  y="27.36" r="7.5" name="D3"/>		
+    <CIRCLE x="9.08"   y="27.36" r="7.5" name="D4"/>		
+    <CIRCLE x="27.24"  y="27.36" r="7.5" name="D5"/>		
+    <CIRCLE x="45.4"   y="27.36" r="7.5" name="D6"/>	
+</MASK>
+
+<MASK name="24-Well Microplate" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <CIRCLE x="-9.65" y="-9.65" r="8.13" name="B3"/>	
+    <CIRCLE x="-28.95" y="-9.65" r="8.13" name="B2"/>	
+    <CIRCLE x="-48.25" y="-9.65" r="8.13" name="B1"/>	
+    <CIRCLE x="-9.65" y="-28.95" r="8.13" name="A3"/>
+    <CIRCLE x="-28.95" y="-28.95" r="8.13" name="A2"/>
+    <CIRCLE x="-48.25" y="-28.95" r="8.13" name="A1"/>
+    <CIRCLE x="-9.65" y="9.65" r="8.13" name="C3"/>
+    <CIRCLE x="-28.95" y="9.65" r="8.13" name="C2"/>
+    <CIRCLE x="-48.25" y="9.65" r="8.13" name="C1"/>
+    <CIRCLE x="-9.65" y="28.95" r="8.13" name="D3"/>
+    <CIRCLE x="-28.95" y="28.95" r="8.13" name="D2"/>
+    <CIRCLE x="-48.25" y="28.95" r="8.13" name="D1"/>
+    <CIRCLE x="9.65" y="9.65" r="8.13" name="C4"/>
+    <CIRCLE x="28.95" y="9.65" r="8.13" name="C5"/>
+    <CIRCLE x="48.25" y="9.65" r="8.13" name="C6"/>
+    <CIRCLE x="9.65" y="28.95" r="8.13" name="D4"/>
+    <CIRCLE x="28.95" y="28.95" r="8.13" name="D5"/>
+    <CIRCLE x="48.25" y="28.95" r="8.13" name="D6"/>
+    <CIRCLE x="9.65" y="-9.65" r="8.13" name="B4"/>
+    <CIRCLE x="28.95" y="-9.65" r="8.13" name="B5"/>
+    <CIRCLE x="48.25" y="-9.65" r="8.13" name="B6"/>
+    <CIRCLE x="9.65" y="-28.95" r="8.13" name="A4"/>
+    <CIRCLE x="28.95" y="-28.95" r="8.13" name="A5"/>
+    <CIRCLE x="48.25" y="-28.95" r="8.13" name="A6"/>
+	
+</MASK>
+ 
+<MASK name="96-Well Plate" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <CIRCLE x="-4.5" y="-4.5" r="3.5" name="D6"/>
+    <CIRCLE x="-4.5" y="-13.5" r="3.5" name="C6"/>
+    <CIRCLE x="-4.5" y="-22.5" r="3.5" name="B6"/>
+    <CIRCLE x="-4.5" y="-31.5" r="3.5" name="A6"/>
+    <CIRCLE x="-13.5" y="-4.5" r="3.5" name="D5"/>
+    <CIRCLE x="-13.5" y="-13.5" r="3.5" name="C5"/>
+    <CIRCLE x="-13.5" y="-22.5" r="3.5" name="B5"/>
+    <CIRCLE x="-13.5" y="-31.5" r="3.5" name="A5"/>
+    <CIRCLE x="-22.5" y="-4.5" r="3.5" name="D4"/>
+    <CIRCLE x="-22.5" y="-13.5" r="3.5" name="C4"/>
+    <CIRCLE x="-22.5" y="-22.5" r="3.5" name="B4"/>
+    <CIRCLE x="-22.5" y="-31.5" r="3.5" name="A4"/>
+    <CIRCLE x="-31.5" y="-4.5" r="3.5" name="D3"/>
+    <CIRCLE x="-31.5" y="-13.5" r="3.5" name="C3"/>
+    <CIRCLE x="-31.5" y="-22.5" r="3.5" name="B3"/>
+    <CIRCLE x="-31.5" y="-31.5" r="3.5" name="A3"/>
+    <CIRCLE x="-40.5" y="-4.5" r="3.5" name="D2"/>
+    <CIRCLE x="-40.5" y="-13.5" r="3.5" name="C2"/>
+    <CIRCLE x="-40.5" y="-22.5" r="3.5" name="B2"/>
+    <CIRCLE x="-40.5" y="-31.5" r="3.5" name="A2"/>
+    <CIRCLE x="-49.5" y="-4.5" r="3.5" name="D1"/>
+    <CIRCLE x="-49.5" y="-13.5" r="3.5" name="C1"/>
+    <CIRCLE x="-49.5" y="-22.5" r="3.5" name="B1"/>
+    <CIRCLE x="-49.5" y="-31.5" r="3.5" name="A1"/>
+    <CIRCLE x="4.5" y="-4.5" r="3.5" name="D7"/>
+    <CIRCLE x="4.5" y="-13.5" r="3.5" name="C7"/>
+    <CIRCLE x="4.5" y="-22.5" r="3.5" name="B7"/>
+    <CIRCLE x="4.5" y="-31.5" r="3.5" name="A7"/>
+    <CIRCLE x="13.5" y="-4.5" r="3.5" name="D8"/>
+    <CIRCLE x="13.5" y="-13.5" r="3.5" name="C8"/>
+    <CIRCLE x="13.5" y="-22.5" r="3.5" name="B8"/>
+    <CIRCLE x="13.5" y="-31.5" r="3.5" name="A8"/>
+    <CIRCLE x="22.5" y="-4.5" r="3.5" name="D9"/>
+    <CIRCLE x="22.5" y="-13.5" r="3.5" name="C9"/>
+    <CIRCLE x="22.5" y="-22.5" r="3.5" name="B9"/>
+    <CIRCLE x="22.5" y="-31.5" r="3.5" name="A9"/>
+    <CIRCLE x="31.5" y="-4.5" r="3.5" name="D10"/>
+    <CIRCLE x="31.5" y="-13.5" r="3.5" name="C10"/>
+    <CIRCLE x="31.5" y="-22.5" r="3.5" name="B10"/>
+    <CIRCLE x="31.5" y="-31.5" r="3.5" name="A10"/>
+    <CIRCLE x="40.5" y="-4.5" r="3.5" name="D11"/>
+    <CIRCLE x="40.5" y="-13.5" r="3.5" name="C11"/>
+    <CIRCLE x="40.5" y="-22.5" r="3.5" name="B11"/>
+    <CIRCLE x="40.5" y="-31.5" r="3.5" name="A11"/>
+    <CIRCLE x="49.5" y="-4.5" r="3.5" name="D12"/>
+    <CIRCLE x="49.5" y="-13.5" r="3.5" name="C12"/>
+    <CIRCLE x="49.5" y="-22.5" r="3.5" name="B12"/>
+    <CIRCLE x="49.5" y="-31.5" r="3.5" name="A12"/>
+    <CIRCLE x="-4.5" y="4.5" r="3.5" name="E6"/>
+    <CIRCLE x="-4.5" y="13.5" r="3.5" name="F6"/>
+    <CIRCLE x="-4.5" y="22.5" r="3.5" name="G6"/>
+    <CIRCLE x="-4.5" y="31.5" r="3.5" name="H6"/>
+    <CIRCLE x="-13.5" y="4.5" r="3.5" name="E5"/>
+    <CIRCLE x="-13.5" y="13.5" r="3.5" name="F5"/>
+    <CIRCLE x="-13.5" y="22.5" r="3.5" name="G5"/>
+    <CIRCLE x="-13.5" y="31.5" r="3.5" name="H5"/>
+    <CIRCLE x="-22.5" y="4.5" r="3.5" name="E4"/>
+    <CIRCLE x="-22.5" y="13.5" r="3.5" name="F4"/>
+    <CIRCLE x="-22.5" y="22.5" r="3.5" name="G4"/>
+    <CIRCLE x="-22.5" y="31.5" r="3.5" name="H4"/>
+    <CIRCLE x="-31.5" y="4.5" r="3.5" name="E3"/>
+    <CIRCLE x="-31.5" y="13.5" r="3.5" name="F3"/>
+    <CIRCLE x="-31.5" y="22.5" r="3.5" name="G3"/>
+    <CIRCLE x="-31.5" y="31.5" r="3.5" name="H3"/>
+    <CIRCLE x="-40.5" y="4.5" r="3.5" name="E2"/>
+    <CIRCLE x="-40.5" y="13.5" r="3.5" name="F2"/>
+    <CIRCLE x="-40.5" y="22.5" r="3.5" name="G2"/>
+    <CIRCLE x="-40.5" y="31.5" r="3.5" name="H2"/>
+    <CIRCLE x="-49.5" y="4.5" r="3.5" name="E1"/>
+    <CIRCLE x="-49.5" y="13.5" r="3.5" name="F1"/>
+    <CIRCLE x="-49.5" y="22.5" r="3.5" name="G1"/>
+    <CIRCLE x="-49.5" y="31.5" r="3.5" name="H1"/>
+    <CIRCLE x="4.5" y="4.5" r="3.5" name="E7"/>
+    <CIRCLE x="4.5" y="13.5" r="3.5" name="F7"/>
+    <CIRCLE x="4.5" y="22.5" r="3.5" name="G7"/>
+    <CIRCLE x="4.5" y="31.5" r="3.5" name="H7"/>
+    <CIRCLE x="13.5" y="4.5" r="3.5" name="E8"/>
+    <CIRCLE x="13.5" y="13.5" r="3.5" name="F8"/>
+    <CIRCLE x="13.5" y="22.5" r="3.5" name="G8"/>
+    <CIRCLE x="13.5" y="31.5" r="3.5" name="H8"/>
+    <CIRCLE x="22.5" y="4.5" r="3.5" name="E9"/>
+    <CIRCLE x="22.5" y="13.5" r="3.5" name="F9"/>
+    <CIRCLE x="22.5" y="22.5" r="3.5" name="G9"/>
+    <CIRCLE x="22.5" y="31.5" r="3.5" name="H9"/>
+    <CIRCLE x="31.5" y="4.5" r="3.5" name="E10"/>
+    <CIRCLE x="31.5" y="13.5" r="3.5" name="F10"/>
+    <CIRCLE x="31.5" y="22.5" r="3.5" name="G10"/>
+    <CIRCLE x="31.5" y="31.5" r="3.5" name="H10"/>
+    <CIRCLE x="40.5" y="4.5" r="3.5" name="E11"/>
+    <CIRCLE x="40.5" y="13.5" r="3.5" name="F11"/>
+    <CIRCLE x="40.5" y="22.5" r="3.5" name="G11"/>
+    <CIRCLE x="40.5" y="31.5" r="3.5" name="H11"/>
+    <CIRCLE x="49.5" y="4.5" r="3.5" name="E12"/>
+    <CIRCLE x="49.5" y="13.5" r="3.5" name="F12"/>
+    <CIRCLE x="49.5" y="22.5" r="3.5" name="G12"/>
+    <CIRCLE x="49.5" y="31.5" r="3.5" name="H12"/>
+
+
+  </MASK>
+
+
+
+  <MASK name="Petri - 50mm Monoplate" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <CIRCLE x="0" y="0" r="25" name="1"/>
+    
+  </MASK>
+
+  <MASK name="Petri - 75mm Monoplate" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <CIRCLE x="0" y="0" r="37.5" name="1"/>
+
+  </MASK>
+    
+  <MASK name="Petri - 100mm Monoplate" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <CIRCLE x="0" y="0" r="50" name="1"/>
+
+  </MASK>
+
+  <MASK name="Petri - 100mm Bi-Plate" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <SECTION x="-1" y="0" r="50" a="90" b="270" name="1"/>
+    <SECTION x="1" y="0" r="50" a="270" b="90" name="2"/>
+ 
+
+  </MASK>
+    
+  <MASK name="Petri - 100mm Tri-Plate" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <SECTION x="-1" y="0" r="50" a="90" b="210" name="1"/>
+    <SECTION x="1" y="0" r="50" a="330" b="90" name="2"/>
+    <SECTION x="0" y="1" r="50" a="210" b="330" name="3"/>
+    
+
+ </MASK>
+
+  <MASK name="Petri - 100mm Quad-Plate" unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <SECTION x="-1" y="-1" r="50" a="90" b="180" name="1"/>
+    <SECTION x="1" y="-1" r="50" a="0" b="90" name="2"/>
+    <SECTION x="1" y="1" r="50" a="270" b="360" name="3"/>
+    <SECTION x="-1" y="1" r="50" a="180" b="270" name="4"/>
+ </MASK>
+ 
+ <MASK name="Plant Table " unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <RECTANGLE left="-170" top="-135" right="-110" bottom="-75" name="A1"/>
+    <RECTANGLE left="-100" top="-135" right="-40" bottom="-75" name="A2"/>    
+    <RECTANGLE left="-30" top="-135" right="30" bottom="-75" name="A3"/>
+    <RECTANGLE left="40" top="-135" right="100" bottom="-75" name="A4"/>    
+    <RECTANGLE left="110" top="-135" right="170" bottom="-75" name="A5"/>    
+    
+    <RECTANGLE left="-170" top="-65" right="-110" bottom="-5" name="B1"/>
+    <RECTANGLE left="-100" top="-65" right="-40" bottom="-5" name="B2"/>    
+    <RECTANGLE left="-30" top="-65" right="30" bottom="-5" name="B3"/>
+    <RECTANGLE left="40" top="-65" right="100" bottom="-5" name="B4"/>    
+    <RECTANGLE left="110" top="-65" right="170" bottom="-5" name="B5"/>    
+
+    <RECTANGLE left="-170" top="5" right="-110" bottom="65" name="C1"/>
+    <RECTANGLE left="-100" top="5" right="-40" bottom="65" name="C2"/>    
+    <RECTANGLE left="-30" top="5" right="30" bottom="65" name="C3"/>
+    <RECTANGLE left="40" top="5" right="100" bottom="65" name="C4"/>    
+    <RECTANGLE left="110" top="5" right="170" bottom="65" name="C5"/>    
+
+    <RECTANGLE left="-170" top="75" right="-110" bottom="135" name="D1"/>
+    <RECTANGLE left="-100" top="75" right="-40" bottom="135" name="D2"/>    
+    <RECTANGLE left="-30" top="75" right="30" bottom="135" name="D3"/>
+    <RECTANGLE left="40" top="75" right="100" bottom="135" name="D4"/>    
+    <RECTANGLE left="110" top="75" right="170" bottom="135" name="D5"/>    
+ </MASK>
+ <MASK name="Plant Table 2 " unit="mm">
+    <ORIGIN center="true" x="256" y="256"/>
+    <RECTANGLE left="-175" top="-140" right="-105" bottom="-70" name="A1"/>
+    <RECTANGLE left="-105" top="-140" right="-35" bottom="-70" name="A2"/>    
+    <RECTANGLE left="-35" top="-140" right="35" bottom="-70" name="A3"/>
+    <RECTANGLE left="35" top="-140" right="105" bottom="-70" name="A4"/>    
+    <RECTANGLE left="105" top="-140" right="175" bottom="-70" name="A5"/>    
+    
+    <RECTANGLE left="-175" top="-70" right="-105" bottom="0" name="B1"/>
+    <RECTANGLE left="-105" top="-70" right="-35" bottom="0" name="B2"/>    
+    <RECTANGLE left="-35" top="-70" right="35" bottom="0" name="B3"/>
+    <RECTANGLE left="35" top="-70" right="105" bottom="0" name="B4"/>    
+    <RECTANGLE left="105" top="-70" right="175" bottom="0" name="B5"/>    
+
+    <RECTANGLE left="-175" top="0" right="-105" bottom="70" name="C1"/>
+    <RECTANGLE left="-105" top="0" right="-35" bottom="70" name="C2"/>    
+    <RECTANGLE left="-35" top="0" right="35" bottom="70" name="C3"/>
+    <RECTANGLE left="35" top="0" right="105" bottom="70" name="C4"/>    
+    <RECTANGLE left="105" top="0" right="175" bottom="70" name="C5"/>    
+
+    <RECTANGLE left="-175" top="70" right="-105" bottom="140" name="D1"/>
+    <RECTANGLE left="-105" top="70" right="-35" bottom="140" name="D2"/>    
+    <RECTANGLE left="-35" top="70" right="35" bottom="140" name="D3"/>
+    <RECTANGLE left="35" top="70" right="105" bottom="140" name="D4"/>    
+    <RECTANGLE left="105" top="70" right="175" bottom="140" name="D5"/>    
+    
+    
+ </MASK>
+
+
+
+ </MASKS>
+    
+
+
+
+
+
+
+
+
+

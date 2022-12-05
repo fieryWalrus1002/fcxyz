@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DEVICES>
+  <DEVICE name="Fluorcam 2000" id="2000">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>  
+  <DEVICE name="Fluorcam 2001" id="2001">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="not defined"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="not defined"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2002" id="2002">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2003" id="2003">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2004" id="2004">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2005" id="2005">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Calibration>
+        <Light type="event_bit1" mask="0x004a"/>
+        <Light type="event_bit4" mask="0x0050"/>        
+    </Calibration>    
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_2"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2006" id="2006">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="QA" var="QA"/>
+  </DEVICE>
+  <DEVICE name="FC Handy GFP" id="2007">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Calibration>
+        <Light type="event_bit1" mask="0x004a"/>
+        <Light type="event_bit4" mask="0x0050"/>        
+    </Calibration>    
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act3" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act3" var="ad5311_2"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2008" id="2008">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="not defined"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="not defined"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2009" id="2009">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="not defined"/>
+    <CHECKBOX caption="OSC" var="event_bit2"/>
+    <CHECKBOX caption="PI_FOC" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="not defined"/>
+    <TRACKBAR caption="PI_FOC" var="ad5311_2"/>
+    <TRACKBAR caption="FREQ" var="not defined"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2010" id="2010">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:,E:,F:," type="olympus"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="event_bit8"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="ad5311_3"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2011" id="2011">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Calibration>
+        <Light type="event_bit8" mask="0x0140"/>
+        <Light type="event_bit4" mask="0x0050"/>        
+    </Calibration>      
+    <Chlorophyl protocol="NDVI-Handy2011.p" lightName="Act1" koefA="4.51" koefB="15.93"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="event_bit8"/>    
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="ad5311_3"/>    
+  </DEVICE>  
+  <DEVICE name="Fluorcam 2100" id="2100">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2101" id="2101">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2200" id="2200">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:,E:,F:,G:,H:" type="zeiss_imager"/>
+    <Axio type="zeiss_imager"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="not defined"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="not defined"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2201" id="2201">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:" type="psi"/>
+    <Extra lights="UV,Blue,Green,WH,FAR,UV,Blue,Green,WH,Far"/>
+    <Axio type="zeiss_imager"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="extra_light_super_on"/>
+    <CHECKBOX caption="FAR" var="not defined"/>
+    <CHECKBOX caption="UV" var="not defined"/>
+    <TRACKBAR caption="Act1" var="extra_light_actinic"/>
+    <TRACKBAR caption="Super" var="extra_light_super" max="511"/>
+    <TRACKBAR caption="FAR" var="not defined"/>
+    <TRACKBAR caption="UV" var="not defined"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2202" id="2202">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <Extra lights="UV,Blue,Green,WH,Red,UV,Blue,Green,WH,Red"/>
+    <Axio type="axio_imager"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="extra_light_super_on"/>
+    <CHECKBOX caption="Far" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="not defined"/>
+    <TRACKBAR caption="Act1" var="extra_light_actinic"/>
+    <TRACKBAR caption="Super" var="extra_light_super" max="511"/>
+    <TRACKBAR caption="Far" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="not defined"/>
+  </DEVICE>  
+<DEVICE name="Fluorcam 2203" id="2203">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <Extra lights="UV,Blue,Green,WH,Red,UV,Blue,Green,WH,Red"/>
+    <Axio type="axio_imager"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="extra_light_super_on"/>
+    <CHECKBOX caption="Far" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="not defined"/>
+    <TRACKBAR caption="Act1" var="extra_light_actinic"/>
+    <TRACKBAR caption="Super" var="extra_light_super" max="511"/>
+    <TRACKBAR caption="Far" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="not defined"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2207" id="2207">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:" type="psi"/>
+    <Axio type="axio_imager"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="event_bit13"/>
+    <CHECKBOX caption="Trans" var="event_bit8"/>
+    <CHECKBOX caption="Blue" var="event_bit2"/> 
+    <CHECKBOX caption="CL" var="event_bit9"/>
+    <TRACKBAR caption="Flashes" var="ad5311_2"/>    
+    <TRACKBAR caption="Act1" var="dac_adr_1_reg_0"/>
+    <TRACKBAR caption="Super" var="dac_adr_1_reg_2"/>
+    <TRACKBAR caption="FAR" var="dac_adr_1_reg_1"/>
+    <TRACKBAR caption="UV" var="dac_adr_2_reg_1"/>
+    <TRACKBAR caption="Trans" var="dac_adr_2_reg_0"/>
+    <TRACKBAR caption="Blue" var="ad5311_0"/>
+    <TRACKBAR caption="CL" var="ad5311_1"/>
+  </DEVICE>  
+  <DEVICE name="Fluorcam 2209" id="2209">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="UV" var="event_bit13"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="Trans" var="event_bit10"/>
+    <TRACKBAR caption="Flashes" var="ad5311_2"/>
+    <TRACKBAR caption="Act1" var="dac_adr_1_reg_0"/>
+    <TRACKBAR caption="Super" var="dac_adr_1_reg_2"/>
+    <TRACKBAR caption="UV" var="dac_adr_2_reg_1"/>
+    <TRACKBAR caption="FAR" var="dac_adr_1_reg_1"/>
+    <TRACKBAR caption="Trans" var="dac_adr_2_reg_0"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2300" id="2300">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:"/>
+    <Calibration>
+        <Light type="event_bit1" mask="0x0042"/>
+        <Light type="event_bit2" mask="0x0044"/>        
+    </Calibration>       
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2301" id="2301">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+   <Filter value="A: RG695 + LP780,B: GG495 + LP660 + BS505-560,C: clear glass,D: free, E: free, F: free, G: free, H: free"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2302" id="2302">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2303" id="2303">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2304" id="2304">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+	<Filter value="A: Chl,B: 570-730nm,C: 450nm,D: 550nm,E: 430-520nm,F: ,G: ,H: "/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2305" id="2305">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:,E:,F:,G:,H:"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2306" id="2306">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2308" id="2308">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+  </DEVICE>
+ 
+  <DEVICE name="Fluorcam 2309" id="2309">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:, B: ,C: ,D: ,E: ,F: ,G: ,H: "/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="ad5311_3"/>
+  </DEVICE>
+  
+  <DEVICE name="Fluorcam 2310" id="2310">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Filter value="A: CHL,B: PAR,C:,D:,E:,F:,G:,H:"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+  </DEVICE>
+
+  <DEVICE name="Fluorcam 2311" id="2311">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:,E:,F:,G:,H:"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit8"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+  </DEVICE>
+
+  <DEVICE name="Fluorcam 2400" id="2400">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <XY minX="0" maxX="800" minY="0" maxY="400" mask="1"/>
+    <Filter value="A:,B:,C:,D:"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2401" id="2401">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <XY minX="0" maxX="1000" minY="0" maxY="400" minZ="0" maxZ="200" mask="1"/>
+    <Filter value="A:,B:,C:,D:"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2402" id="2402">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <XY minX="0" maxX="1000" minZ="0" maxZ="200" mask="7"/>
+  </DEVICE>  
+  <DEVICE name="Fluorcam 2500 LU" id="2500">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2501 LU" id="2501">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <Filter value="A: Chl,B: PAR,C: ,D: "/>    
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+    <Calibration>
+        <Light type="event_bit2" mask="0x0044"/>
+        <Light type="event_bit1" mask="0x0042"/>        
+    </Calibration>    
+  </DEVICE>
+  <DEVICE name="Fluorcam 2502 LU" id="2502">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <Filter value="A: Chl,B: GFP,C:PAR ,D: "/>    
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2503 LU" id="2503">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <Filter value="A: Chl,B: ,C: ,D: ,E: ,F: ,G: ,H: "/>    
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2504 LU" id="2504">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <Filter value="A: Chl,B: ,C: ,D: ,E: ,F: ,G: ,H: "/>    
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="super_on"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+    <Calibration>
+        <Light type="event_bit2" mask="0x0044"/>
+        <Light type="event_bit1" mask="0x0042"/>        
+    </Calibration>      
+  </DEVICE>
+  <DEVICE name="Fluorcam 2505 LU" id="2505">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <Filter value="A: ,B: ,C: ,D: ,E: ,F: ,G: ,H: "/>    
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  
+  <DEVICE name="Fluorcam 2507 LU" id="2507">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:" type="psi"/>
+    <Axio type="axio_imager"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="event_bit13"/>
+    <CHECKBOX caption="Trans" var="event_bit8"/>
+    <TRACKBAR caption="Act1" var="dac_adr_1_reg_0"/>
+    <TRACKBAR caption="Super" var="dac_adr_1_reg_2"/>
+    <TRACKBAR caption="FAR" var="dac_adr_1_reg_1"/>
+    <TRACKBAR caption="UV" var="dac_adr_2_reg_1"/>
+    <TRACKBAR caption="Trans" var="dac_adr_2_reg_0"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2509 LU" id="2509">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="UV" var="event_bit13"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="Trans" var="event_bit10"/>
+    <TRACKBAR caption="Flashes" var="ad5311_2"/>
+    <TRACKBAR caption="Act1" var="dac_adr_1_reg_0"/>
+    <TRACKBAR caption="Super" var="dac_adr_1_reg_2"/>
+    <TRACKBAR caption="UV" var="dac_adr_2_reg_1"/>
+    <TRACKBAR caption="FAR" var="dac_adr_1_reg_1"/>
+    <TRACKBAR caption="Trans" var="dac_adr_2_reg_0"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2510 LU" id="2510">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>   
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit8"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_2"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2512 LU" id="2512">
+    <ShutterLimit value="3"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit8"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>    
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+  </DEVICE>
+
+  <DEVICE name="Fluorcam 2513 LU" id="2513">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <Filter value="A: Chl,B: PAR,C: ,D: ,E: ,F: ,G: ,H: "/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="Act3" var="event_bit2"/>
+    <CHECKBOX caption="Act4" var="event_bit5"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Act3" var="ad5311_3"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+  </DEVICE>
+  
+  <DEVICE name="Fluorcam 2600 LU" id="2600">
+    <CHECKBOX caption="Act3" var="event_bit2"/>
+    <TRACKBAR caption="Act3" var="ad5311_3"/>  
+  </DEVICE>
+ <DEVICE name="Fluorcam 2700 LU" id="2700">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit8"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <plc addr="172.23.0.36:9600"/>
+    <rfid port="//./COM4"/>    
+  </DEVICE>
+  <DEVICE name="Fluorcam 2701 LU" id="2701">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <Filter value="A: Chl,B: GFP,C: ,D: ,E: ,F: ,G: ,H: "/>    
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit8"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+    <plc addr="172.23.0.36:9600" type="1"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam 2702 LU" id="2702">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit8"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <Calibration>
+        <Light type="event_bit1" mask="0x0142"/>
+        <Light type="event_bit4" mask="0x0050"/>        
+    </Calibration>    
+  </DEVICE>
+  <DEVICE name="Fluorcam 2703 LU XYZ" id="2703">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit8"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+    <plc addr="172.23.0.36:9600" type="1"/>
+  </DEVICE>
+  
+  <DEVICE name="Fluorcam 2704 LU" id="2704">
+    <ShutterLimit value="3"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit8"/>
+    <CHECKBOX caption="Act2" var="event_bit4"/>
+    <CHECKBOX caption="FAR" var="event_bit2"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Act2" var="ad5311_2"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_3"/>
+  </DEVICE>
+
+  
+  <DEVICE name="Fluorcam 5010" id="5010" text="test only">
+    <ShutterLimit value="4"/>
+    <CommSpeed value="230"/>
+    <Filter value="A:,B:,C:,D:,E:,F:," type="olympus"/>
+    <LaserSort type="psi"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <CHECKBOX caption="FAR" var="event_bit4"/>
+    <CHECKBOX caption="UV" var="event_bit8"/>
+    <CHECKBOX caption="Laser1" var="event_bit11"/>
+    <CHECKBOX caption="Laser2" var="event_bit12"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <TRACKBAR caption="FAR" var="ad5311_2"/>
+    <TRACKBAR caption="UV" var="ad5311_3"/>
+    <TRACKBAR caption="X" var="dac_adr_1_reg_0"/>
+    <TRACKBAR caption="Y" var="dac_adr_1_reg_1"/>
+    <TRACKBAR caption="Laser1" var="dac_adr_1_reg_2"/>    
+    <TRACKBAR caption="Laser2" var="dac_adr_1_reg_3"/>
+  </DEVICE>
+  <DEVICE name="Fluorcam Photon" id="5000" text="test only">
+    <ShutterLimit value="2"/>
+    <CommSpeed value="230"/>
+    <CHECKBOX caption="Flashes" var="event_bit0"/>
+    <CHECKBOX caption="Act1" var="event_bit1"/>
+    <CHECKBOX caption="Super" var="event_bit3"/>
+    <TRACKBAR caption="Act1" var="ad5311_0"/>
+    <TRACKBAR caption="Super" var="ad5311_1"/>
+    <Photon type="PHOTON3"/>
+  </DEVICE>
+</DEVICES>
